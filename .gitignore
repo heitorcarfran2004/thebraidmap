@@ -1,0 +1,10 @@
+# Site público (repo thebraidmap). Só vai o site montado + as fontes que o geram.
+node_modules/
+*.log
+# versões antigas, notas internas e ferramentas locais (apontam para pastas da máquina)
+_versoes/
+README.md
+conferir.cjs
+servidor.cjs
+_tres-paginas.cjs
+.url-no-ar

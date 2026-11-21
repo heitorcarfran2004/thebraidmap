@@ -1,0 +1,398 @@
+{
+  "_leia": "Texto da página em INGLÊS (o que vai ao ar). A mesma página em português, para revisão, está em textos/pt.json: toda mudança aqui vai para lá também. Edite e rode `node _montar.cjs`. Nunca edite o index.html gerado. Preço, checkout e pixel ficam só no bloco config. Número de modelos em numModelos, nome em nome. v3 (21/11): estrutura enxuta pedida pelo Heitor, 9 seções.",
+  "nome": "The Braid Map",
+  "numModelos": "50",
+  "config": {
+    "lang": "en",
+    "locale": "en-US",
+    "saida": ".",
+    "moeda": {
+      "simbolo": "$",
+      "antes": true,
+      "espaco": false,
+      "decimal": ".",
+      "milhar": ","
+    },
+    "precos": {
+      "_nota": "Essencial 9.90 e Completo 19.90 definidos pelo Heitor (20/11/2026). popup 14.90 e saida 7.90 = sugestão do Webdesigner. valorGuia e o valor de cada bônus = 'valor' riscado, sugestão sem fonte de mercado. trancista/visitasAno: sobra da v2, sem uso na página.",
+      "essencial": 9.9,
+      "completo": 19.9,
+      "popup": 14.9,
+      "saida": 7.9,
+      "valorGuia": 27,
+      "trancista": 150,
+      "visitasAno": 6
+    },
+    "garantiaDias": 7,
+    "checkout": {
+      "essencial": "TROCAR-CHECKOUT-ESSENCIAL",
+      "completo": "TROCAR-CHECKOUT-COMPLETO",
+      "popup": "TROCAR-CHECKOUT-POPUP",
+      "saida": "TROCAR-CHECKOUT-SAIDA"
+    },
+    "backRedirect": true,
+    "_backRedirect": "O back redirect para /promo só liga de fato quando config.checkout.saida tiver link https.",
+    "pixelMeta": "TROCAR-PIXEL-META",
+    "utmifyPixel": "TROCAR-UTMIFY-ID",
+    "avisoTrocar": "Checkout not set up yet (TROCAR-CHECKOUT). Add the payment link in textos/en.json."
+  },
+  "meta": {
+    "titulo": "The Braid Map: {{numModelos}} Braid Styles, Step by Step",
+    "descricao": "A printable guide with {{numModelos}} braid styles, step by step: the basics first, then a style sheet, a parting map and a visual step-by-step for every style."
+  },
+  "hero": {
+    "ph": "[mockup do PDF: capa + páginas abertas do guia]",
+    "selo": "The ultimate braid guide",
+    "h1": "<span class=\"forte\"><span class=\"cor\">Master</span> {{numModelos}} Braid Styles</span> <span class=\"resto\">A Visual <span style=\"white-space:nowrap\">Step-by-Step</span> Guide, Beginner to Advanced</span>",
+    "sub": "Every style comes with its parting map, the exact numbers and a visual step-by-step.",
+    "lista": [
+      "Knotless, box braids, boho, goddess, stitch, fulani and more",
+      "Rows, braids per row and packs for every style",
+      "For your daughter, for yourself or for your clients"
+    ],
+    "cta": "I want the {{numModelos}} styles",
+    "img": "assets/hero-06.webp",
+    "alt": "The Braid Map: the book, the style sheet on a tablet and the parting map on a phone",
+    "img640": "assets/hero-06-640.webp"
+  },
+  "dentro": {
+    "h2": "Take a look <em>inside the pages</em>",
+    "sub": "Every style is laid out the same way: the look, the parting map and the steps. Print it or open it on your phone.",
+    "paginas": [
+      {
+        "img": "assets/en-p1.webp",
+        "alt": "Style 03, Medium Knotless: style sheet"
+      },
+      {
+        "img": "assets/en-p2.webp",
+        "alt": "Style 03, Medium Knotless: parting map"
+      },
+      {
+        "img": "assets/en-p3.webp",
+        "alt": "Style 03, Medium Knotless: step-by-step"
+      },
+      {
+        "img": "assets/en-m18-p1.webp",
+        "alt": "Style 18, Goddess Knotless: style sheet"
+      },
+      {
+        "img": "assets/en-m18-p2.webp",
+        "alt": "Style 18, Goddess Knotless: parting map"
+      },
+      {
+        "img": "assets/en-m18-p3.webp",
+        "alt": "Style 18, Goddess Knotless: step-by-step"
+      },
+      {
+        "img": "assets/en-m34-p1.webp",
+        "alt": "Style 34, Straight-Back Stitch Braids: style sheet"
+      },
+      {
+        "img": "assets/en-m34-p2.webp",
+        "alt": "Style 34, Straight-Back Stitch Braids: parting map"
+      },
+      {
+        "img": "assets/en-m34-p3.webp",
+        "alt": "Style 34, Straight-Back Stitch Braids: step-by-step"
+      }
+    ],
+    "bullets": [
+      "Sorted by level",
+      "A parting map for every style",
+      "Illustrated step-by-step",
+      "A pack chart for every size",
+      "Print it or use it on your phone",
+      "Instant, lifetime access"
+    ]
+  },
+  "dores": {
+    "kicker": "Whichever way you braid",
+    "h2": "Find your reason. The map works for all three.",
+    "intro": "The styles are the same. What changes is whose head is in front of you.",
+    "perfis": [
+      {
+        "ico": "<svg viewBox=\"0 0 24 24\"><circle cx=\"9\" cy=\"7\" r=\"3\"/><circle cx=\"17.5\" cy=\"10\" r=\"2\"/><path d=\"M3 21v-3a6 6 0 0 1 12 0v3M14.5 21v-2a3 3 0 0 1 6 0v2\"/></svg>",
+        "tag": "Your daughter",
+        "t": "You braid her hair",
+        "p": "School starts, every braider is booked, and the ones who aren’t want $200 for a kid’s style."
+      },
+      {
+        "ico": "<svg viewBox=\"0 0 24 24\"><ellipse cx=\"12\" cy=\"10\" rx=\"6\" ry=\"8\"/><path d=\"M12 18v3M8 21h8\"/></svg>",
+        "tag": "Yourself",
+        "t": "You braid your own hair",
+        "p": "You refuse to pay $300 for a style, but you can’t see the back of your head and your arms give out by row four."
+      },
+      {
+        "ico": "<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M15 9.2a3 3 0 0 0-3-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2a3 3 0 0 1-3-1.5M12 6v1.6M12 16.4V18\"/></svg>",
+        "tag": "Your clients",
+        "t": "You braid for extra income",
+        "p": "A client shows you a photo of a style you’ve never done. How many rows? How many packs? What do you charge?"
+      }
+    ],
+    "comunsTitulo": "And the two things that trip everyone up:",
+    "comuns": [
+      {
+        "t": "The parting",
+        "p": "Braiding is the easy part. It’s the crooked parts and the braids in three different sizes."
+      },
+      {
+        "t": "“Just add hair”",
+        "p": "Where? How much? The video speeds up right there, and you get a bump at the root."
+      }
+    ],
+    "adTitulo": "Same hair. Now with a map.",
+    "adImg": "assets/antes-depois-en.webp",
+    "adAlt": "The same woman seen from above and behind: messy unbraided hair before, neat knotless braids after"
+  },
+  "beneficios": {
+    "kicker": "Perfect for…",
+    "h2": "The moments when a map saves the day",
+    "itens": [
+      {
+        "t": "Wash-day breaks",
+        "p": "Braid once, then wake up and go for weeks."
+      },
+      {
+        "t": "Back to school",
+        "p": "Neat braids for the first day and picture day."
+      },
+      {
+        "t": "When the braider cancels",
+        "p": "Your plan B is already on paper."
+      },
+      {
+        "t": "Vacations and cruises",
+        "p": "Styles that hold up in the pool and the ocean."
+      },
+      {
+        "t": "Tender-headed kids",
+        "p": "Short sessions, at her pace, gentle at the root."
+      },
+      {
+        "t": "Saying “yes” to a client",
+        "p": "Open the map, check the packs and the time, and quote."
+      }
+    ]
+  },
+  "recebe": {
+    "kicker": "What you get",
+    "h2": "Everything inside {{nome}}",
+    "sub": "A full guide, not a single chart.",
+    "itens": [
+      {
+        "n": "1",
+        "t": "Part 1 · Preparation",
+        "p": "The basics every tutorial skips: supplies, sizes, a pack chart, parting, feed-in, grip, ends, braiding kids, upkeep and take-down."
+      },
+      {
+        "n": "{{numModelos}}",
+        "t": "Part 2 · {{numModelos}} styles by level",
+        "p": "From knotless and box braids to cornrows, stitch and fulani. Level 1 for your first try, Level 3 for the showstoppers."
+      },
+      {
+        "n": "3",
+        "t": "One style, three pages",
+        "p": "A style sheet (the look and the numbers), a parting map (rows, braids per row, part size) and a visual step-by-step."
+      },
+      {
+        "n": "✓",
+        "t": "Quick-reference table",
+        "p": "Every style with its level and time, so you can pick by the time you have."
+      }
+    ],
+    "cta": "Show me the plans",
+    "img": "assets/en-tres.webp",
+    "alt": "The 3 pages of one style: style sheet, parting map and step-by-step"
+  },
+  "bonus": {
+    "kicker": "Included in the Complete Plan",
+    "h2": "6 bonuses, one for every reason you braid",
+    "intro": "Yours free when you choose the Complete Plan.",
+    "valorRot": "Value:",
+    "incluso": "free",
+    "itens": [
+      {
+        "rot": "Bonus 1",
+        "para": "Braid yourself",
+        "t": "Do It On Yourself",
+        "p": "The same maps on your own head: the mirror setup, the sections you can’t see, and an order that saves your arms.",
+        "valor": 9,
+        "ph": "[capa: Do It On Yourself]",
+        "img": "assets/bonus-1.webp"
+      },
+      {
+        "rot": "Bonus 2",
+        "para": "Braid kids",
+        "t": "20 Back-to-School Kids’ Styles",
+        "p": "20 kids’ styles for the first day of school and picture day, step by step.",
+        "valor": 9,
+        "ph": "[capa: 20 Back-to-School]",
+        "img": "assets/bonus-2.webp"
+      },
+      {
+        "rot": "Bonus 3",
+        "para": "Braid for income",
+        "t": "The 20 Best-Selling Styles",
+        "p": "The 20 styles clients ask for the most, so you know what to offer first.",
+        "valor": 9,
+        "ph": "[capa: Best-Selling Styles]",
+        "img": "assets/bonus-3.webp"
+      },
+      {
+        "rot": "Bonus 4",
+        "para": "Upkeep",
+        "t": "How to Wash Your Braids",
+        "p": "Wash and refresh your braids without frizz and without taking them down.",
+        "valor": 9,
+        "ph": "[capa: How to Wash]",
+        "img": "assets/bonus-4.webp"
+      },
+      {
+        "rot": "Bonus 5",
+        "para": "Braid for income",
+        "t": "How to Price Your Braids",
+        "p": "Set your prices by style, time and hair, and stop undercharging.",
+        "valor": 9,
+        "ph": "[capa: How to Price]",
+        "img": "assets/bonus-5.webp"
+      },
+      {
+        "rot": "Bonus 6",
+        "para": "Travel",
+        "t": "Vacation & Swim Braids",
+        "p": "Styles that survive the pool, the ocean and two weeks without touching them, plus chlorine and salt care.",
+        "valor": 9,
+        "ph": "[capa: Vacation & Swim]",
+        "img": "assets/bonus-6.webp"
+      }
+    ]
+  },
+  "oferta": {
+    "kicker": "Choose your plan",
+    "h2": "Get the map today",
+    "sub": "One-time payment. Instant access by email. No subscription.",
+    "de": "Value:",
+    "precoNota": "one-time payment · instant access",
+    "essencial": {
+      "nome": "Essential",
+      "desc": "The guide",
+      "itens": [
+        "The {{numModelos}}-style guide (PDF)",
+        "Lifetime access"
+      ],
+      "cta": "Just the guide"
+    },
+    "completo": {
+      "selo": "Best value · most complete",
+      "nome": "Complete",
+      "desc": "The guide + 6 bonuses",
+      "itens": [
+        "Everything in the Essential Plan"
+      ],
+      "eco": "You save {{p.ecoCompleto}}",
+      "cta": "Yes, I want the Complete Plan"
+    },
+    "imgEssencial": "",
+    "imgCompleto": "assets/pacote.webp",
+    "altCompleto": "The Braid Map guide in the center with the 6 bonus guides around it"
+  },
+  "garantia": {
+    "selo": "day<br>guarantee",
+    "h2": "{{garantiaDias}}-day guarantee",
+    "p": "Try the guide. If it’s not for you, email us within {{garantiaDias}} days and get 100% of your money back."
+  },
+  "faq": {
+    "kicker": "Questions",
+    "h2": "Frequently asked questions",
+    "cta": "Choose my plan",
+    "itens": [
+      {
+        "q": "How many packs of hair do I need?",
+        "a": "It depends on the size and the length. Part 1 has a pack chart by size and length, for kids and for adults, and every style sheet tells you how many packs that style takes. No more buying 3 and running out halfway."
+      },
+      {
+        "q": "What’s the difference between small, smedium, medium, large and jumbo?",
+        "a": "The size guide defines each one with numbers: part size, average number of braids and time. Every parting map also shows the part size row by row, in inches and cm, so “medium” stops being a guess."
+      },
+      {
+        "q": "How much hair do I add, and when?",
+        "a": "The feed-in chapter shows where the first piece goes, how much to use and when to add the second and third, so the root stays flat. Each style’s map has its own feed-in table."
+      },
+      {
+        "q": "Overhand or underhand? I’m left-handed.",
+        "a": "The grip chapter explains both and how to pick one and stick with it, which is what keeps the braids even. Left-handed braiders follow the same steps from the other side."
+      },
+      {
+        "q": "How do I do the back of my own head?",
+        "a": "The map tells you where every section goes before you start, so you work by count, not by sight. The Do It On Yourself bonus (Complete Plan) adds the mirror setup and an order that saves your arms."
+      },
+      {
+        "q": "How long will it take me?",
+        "a": "Every style sheet gives an estimated time. Level 1 styles have bigger parts and fewer braids, so they’re the quickest. With kids, the guide shows how to split a style into shorter sessions."
+      },
+      {
+        "q": "I’ve never braided before. Is this for me?",
+        "a": "Yes. Start with Part 1 and the Level 1 styles: big parts, fewer braids, every number spelled out. Move up to Level 2 and 3 when you’re ready."
+      },
+      {
+        "q": "Can I do this on short hair or very curly hair? Do I have to straighten it first?",
+        "a": "The Preparation part covers washing, drying and stretching the hair before you braid, and every style sheet notes the length it works best on."
+      },
+      {
+        "q": "What gel, mousse or edge control should I use?",
+        "a": "The supplies chapter lists everything you need and what each product is for. No specific brand required: buy what you already trust."
+      },
+      {
+        "q": "Will it hurt? Will it damage the edges?",
+        "a": "Braids pulled too tight at the root put stress on the hairline. The guide shows how to keep the root firm without pulling and which sizes are lighter. It makes no promises about hair health or growth. If something hurts, stop and loosen it."
+      },
+      {
+        "q": "Is this a video course? How do I get it?",
+        "a": "It’s a printable PDF guide with maps, charts and illustrated steps. Right after your payment you get an email with your access. Read it on your phone, tablet or computer, or print it."
+      },
+      {
+        "q": "Is it a subscription?",
+        "a": "No. It’s a one-time payment with lifetime access."
+      },
+      {
+        "q": "What if I don’t like it?",
+        "a": "You have a {{garantiaDias}}-day money-back guarantee. Just email us and we’ll refund 100% of your payment."
+      }
+    ]
+  },
+  "rodape": {
+    "direitos": "© 2026 {{nome}}. All rights reserved.",
+    "termos": "Terms of use",
+    "privacidade": "Privacy policy",
+    "aviso": "This guide teaches hair styling techniques. It is not medical advice and makes no claims about hair growth or scalp health. Results depend on practice.",
+    "meta": "This site is not part of the Facebook website or Facebook Inc. and is not endorsed by Facebook in any way."
+  },
+  "popup": {
+    "fechar": "Close",
+    "kicker": "Wait, one-time offer",
+    "h3": "Get all 6 bonuses for just {{p.difPopup}} more",
+    "sub": "Upgrade to the Complete Plan: the full guide plus all 6 bonuses (Do It On Yourself, 20 Back-to-School Kids’ Styles, The 20 Best-Selling Styles, How to Wash Your Braids, How to Price Your Braids and Vacation & Swim Braids).",
+    "dif": "only {{p.difPopup}} more than the Essential",
+    "sim": "Yes, upgrade me",
+    "nao": "No thanks, just the guide"
+  },
+  "promo": {
+    "titulo": "Wait: {{nome}} for {{p.saida}}",
+    "topo": "Before you go: a lower price, only on this page",
+    "pill": "Last chance",
+    "h1": "Get the full guide for just {{p.saida}}",
+    "sub": "Same guide, same {{numModelos}} styles. One-time price, only on this page.",
+    "ph": "[mockup do PDF]",
+    "itens": [
+      "Part 1: Preparation (supplies, sizes, packs, parting, feed-in, grip, kids)",
+      "{{numModelos}} styles by level, each with a style sheet, a parting map and the steps",
+      "Printable PDF, instant access by email",
+      "{{garantiaDias}}-day money-back guarantee"
+    ],
+    "de": "Regular price",
+    "por": "today only:",
+    "cta": "Yes, I want it for {{p.saida}}",
+    "nota": "One-time payment. This offer won’t show up again."
+  },
+  "topo": "Limited offer · Ends today"
+}

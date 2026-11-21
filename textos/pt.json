@@ -1,0 +1,403 @@
+{
+  "_leia": "A MESMA página do textos/en.json, traduzida para o Heitor revisar (sai em pt/index.html, não vai ao ar). Toda mudança de texto vale para os dois arquivos. Preço e checkout: o que vale é o en.json.",
+  "nome": "The Braid Map",
+  "numModelos": "50",
+  "config": {
+    "lang": "pt-BR",
+    "locale": "pt-BR",
+    "saida": "pt",
+    "moeda": {
+      "simbolo": "US$",
+      "antes": true,
+      "espaco": true,
+      "decimal": ",",
+      "milhar": "."
+    },
+    "precos": {
+      "_nota": "Espelho do en.json (o preço que vale é o de lá).",
+      "essencial": 9.9,
+      "completo": 19.9,
+      "popup": 14.9,
+      "saida": 7.9,
+      "valorGuia": 27,
+      "trancista": 150,
+      "visitasAno": 6
+    },
+    "garantiaDias": 7,
+    "checkout": {
+      "essencial": "TROCAR-CHECKOUT-ESSENCIAL",
+      "completo": "TROCAR-CHECKOUT-COMPLETO",
+      "popup": "TROCAR-CHECKOUT-POPUP",
+      "saida": "TROCAR-CHECKOUT-SAIDA"
+    },
+    "backRedirect": false,
+    "pixelMeta": "TROCAR-PIXEL-META",
+    "utmifyPixel": "TROCAR-UTMIFY-ID",
+    "avisoTrocar": "Versão em português, só para revisão: os botões não vão ao checkout."
+  },
+  "meta": {
+    "titulo": "[PT · revisão] O Mapa das Tranças: {{numModelos}} modelos passo a passo",
+    "descricao": "Guia para imprimir com {{numModelos}} modelos de trança passo a passo: primeiro o básico, depois ficha, mapa de divisão e passo a passo visual de cada modelo."
+  },
+  "hero": {
+    "ph": "[mockup do PDF: capa + páginas abertas do guia]",
+    "selo": "O guia definitivo das tranças",
+    "h1": "<span class=\"forte\">{{numModelos}} Modelos de Tranças</span> <span class=\"resto\">com Guia Visual Passo a Passo, do Básico ao Avançado</span>",
+    "sub": "Cada modelo vem com o mapa de divisão, os números exatos e o passo a passo visual.",
+    "lista": [
+      "Knotless, box braids, boho, goddess, stitch, fulani e mais",
+      "Fileiras, tranças por fileira e pacotes de cada modelo",
+      "Na sua filha, em você mesma ou nas suas clientes"
+    ],
+    "cta": "Quero os {{numModelos}} modelos",
+    "img": "assets/hero-06.webp",
+    "alt": "The Braid Map: o livro, a ficha no tablet e o mapa de divisão no celular",
+    "img640": "assets/hero-06-640.webp"
+  },
+  "dentro": {
+    "h2": "Dê uma olhada <em>por dentro das páginas</em>",
+    "sub": "Todo modelo segue o mesmo formato: o visual, o mapa de divisão e os passos. Imprima ou abra no celular.",
+    "paginas": [
+      {
+        "img": "assets/r4v2-p1.webp",
+        "alt": "Modelo 1: ficha"
+      },
+      {
+        "img": "assets/r4v2-p2.webp",
+        "alt": "Modelo 1: mapa de divisão"
+      },
+      {
+        "img": "assets/r4v2-p3.webp",
+        "alt": "Modelo 1: passo a passo"
+      },
+      {
+        "img": "",
+        "alt": "Modelo 2: ficha",
+        "_modelo": "modelo 2 (TROCAR quando o Entregador entregar)"
+      },
+      {
+        "img": "",
+        "alt": "Modelo 2: mapa de divisão",
+        "_modelo": "modelo 2 (TROCAR quando o Entregador entregar)"
+      },
+      {
+        "img": "",
+        "alt": "Modelo 2: passo a passo",
+        "_modelo": "modelo 2 (TROCAR quando o Entregador entregar)"
+      },
+      {
+        "img": "",
+        "alt": "Modelo 3: ficha",
+        "_modelo": "modelo 3 (TROCAR quando o Entregador entregar)"
+      },
+      {
+        "img": "",
+        "alt": "Modelo 3: mapa de divisão",
+        "_modelo": "modelo 3 (TROCAR quando o Entregador entregar)"
+      },
+      {
+        "img": "",
+        "alt": "Modelo 3: passo a passo",
+        "_modelo": "modelo 3 (TROCAR quando o Entregador entregar)"
+      }
+    ],
+    "bullets": [
+      "Organizado por nível",
+      "Um mapa de divisão em cada modelo",
+      "Passo a passo ilustrado",
+      "Tabela de pacotes por tamanho",
+      "Imprima ou use no celular",
+      "Acesso imediato e vitalício"
+    ]
+  },
+  "dores": {
+    "kicker": "Seja qual for o seu jeito de trançar",
+    "h2": "Encontre o seu motivo. O mapa serve para os três.",
+    "intro": "Os modelos são os mesmos. O que muda é de quem é a cabeça na sua frente.",
+    "perfis": [
+      {
+        "ico": "<svg viewBox=\"0 0 24 24\"><circle cx=\"9\" cy=\"7\" r=\"3\"/><circle cx=\"17.5\" cy=\"10\" r=\"2\"/><path d=\"M3 21v-3a6 6 0 0 1 12 0v3M14.5 21v-2a3 3 0 0 1 6 0v2\"/></svg>",
+        "tag": "A sua filha",
+        "t": "Você trança o cabelo dela",
+        "p": "As aulas vão começar, toda trancista está lotada, e as que não estão querem US$ 200 por um penteado de criança."
+      },
+      {
+        "ico": "<svg viewBox=\"0 0 24 24\"><ellipse cx=\"12\" cy=\"10\" rx=\"6\" ry=\"8\"/><path d=\"M12 18v3M8 21h8\"/></svg>",
+        "tag": "Você mesma",
+        "t": "Você trança o próprio cabelo",
+        "p": "Você se recusa a pagar US$ 300 num penteado, mas não enxerga a nuca e o braço cansa na quarta fileira."
+      },
+      {
+        "ico": "<svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M15 9.2a3 3 0 0 0-3-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2a3 3 0 0 1-3-1.5M12 6v1.6M12 16.4V18\"/></svg>",
+        "tag": "As suas clientes",
+        "t": "Você trança para ter renda extra",
+        "p": "A cliente te mostra a foto de um modelo que você nunca fez. Quantas fileiras? Quantos pacotes? Quanto cobrar?"
+      }
+    ],
+    "comunsTitulo": "E as duas coisas que derrubam todo mundo:",
+    "comuns": [
+      {
+        "t": "A divisão",
+        "p": "Trançar é a parte fácil. O problema são as divisões tortas e as tranças de três tamanhos diferentes."
+      },
+      {
+        "t": "“É só colocar o cabelo”",
+        "p": "Onde? Quanto? O vídeo acelera bem nessa hora, e sai um calombo na raiz."
+      }
+    ],
+    "adTitulo": "O mesmo cabelo. Agora com um mapa.",
+    "adImg": "assets/antes-depois-pt.webp",
+    "adAlt": "A mesma mulher vista de cima e de trás: cabelo solto e bagunçado antes, knotless caprichadas depois"
+  },
+  "beneficios": {
+    "kicker": "Perfeito para…",
+    "h2": "Os momentos em que um mapa salva o dia",
+    "itens": [
+      {
+        "t": "Folga do dia de lavar o cabelo",
+        "p": "Trança uma vez e, por semanas, é só acordar e sair."
+      },
+      {
+        "t": "Volta às aulas",
+        "p": "Tranças caprichadas para o primeiro dia e o dia da foto."
+      },
+      {
+        "t": "Quando a trancista desmarca",
+        "p": "O seu plano B já está no papel."
+      },
+      {
+        "t": "Férias e cruzeiros",
+        "p": "Modelos que aguentam piscina e mar."
+      },
+      {
+        "t": "Criança de couro cabeludo sensível",
+        "p": "Sessões curtas, no ritmo dela, com delicadeza na raiz."
+      },
+      {
+        "t": "Dizer “sim” a uma cliente",
+        "p": "Abra o mapa, confira os pacotes e o tempo, e passe o orçamento."
+      }
+    ]
+  },
+  "recebe": {
+    "kicker": "O que você recebe",
+    "h2": "Tudo o que vem dentro do {{nome}}",
+    "sub": "Um guia completo, não uma tabela solta.",
+    "itens": [
+      {
+        "n": "1",
+        "t": "Parte 1 · Preparação",
+        "p": "O básico que todo tutorial pula: material, tamanhos, tabela de pacotes, divisão, feed-in, pegada, pontas, trançar criança, manutenção e como desfazer."
+      },
+      {
+        "n": "{{numModelos}}",
+        "t": "Parte 2 · {{numModelos}} modelos por nível",
+        "p": "De knotless e box braids a nagô, stitch e fulani. Nível 1 para a primeira tentativa, Nível 3 para os de parar a rua."
+      },
+      {
+        "n": "3",
+        "t": "Um modelo, três páginas",
+        "p": "Uma ficha (o visual e os números), um mapa de divisão (fileiras, tranças por fileira, tamanho da divisão) e um passo a passo visual."
+      },
+      {
+        "n": "✓",
+        "t": "Tabela de consulta rápida",
+        "p": "Todos os modelos com nível e tempo, para você escolher pelo tempo que tem."
+      }
+    ],
+    "cta": "Quero ver os planos",
+    "img": "assets/r4v2-tres.webp",
+    "alt": "As 3 páginas de um modelo: ficha, mapa de divisão e passo a passo"
+  },
+  "bonus": {
+    "kicker": "Inclusos no Plano Completo",
+    "h2": "6 bônus, um para cada motivo de trançar",
+    "intro": "Grátis para quem escolhe o Plano Completo.",
+    "valorRot": "Valor:",
+    "incluso": "grátis",
+    "itens": [
+      {
+        "rot": "Bônus 1",
+        "para": "Em você mesma",
+        "t": "Do It On Yourself (Faça em você mesma)",
+        "p": "Os mesmos mapas na sua própria cabeça: a montagem dos espelhos, as seções que você não enxerga e uma ordem que poupa o braço.",
+        "valor": 9,
+        "ph": "[capa: Do It On Yourself]",
+        "img": "assets/bonus-1.webp"
+      },
+      {
+        "rot": "Bônus 2",
+        "para": "Na criança",
+        "t": "20 Back-to-School Kids’ Styles (20 modelos infantis de volta às aulas)",
+        "p": "20 modelos infantis para o primeiro dia de aula e o dia da foto, passo a passo.",
+        "valor": 9,
+        "ph": "[capa: 20 Back-to-School]",
+        "img": "assets/bonus-2.webp"
+      },
+      {
+        "rot": "Bônus 3",
+        "para": "Para renda",
+        "t": "The 20 Best-Selling Styles (Os 20 modelos que mais vendem)",
+        "p": "Os 20 modelos que as clientes mais pedem, para você saber o que oferecer primeiro.",
+        "valor": 9,
+        "ph": "[capa: Best-Selling Styles]",
+        "img": "assets/bonus-3.webp"
+      },
+      {
+        "rot": "Bônus 4",
+        "para": "Manutenção",
+        "t": "How to Wash Your Braids (Como lavar o cabelo trançado)",
+        "p": "Lave e renove as tranças sem arrepiar e sem precisar desmanchar.",
+        "valor": 9,
+        "ph": "[capa: How to Wash]",
+        "img": "assets/bonus-4.webp"
+      },
+      {
+        "rot": "Bônus 5",
+        "para": "Para renda",
+        "t": "How to Price Your Braids (Como precificar suas tranças)",
+        "p": "Defina o preço por modelo, tempo e cabelo, e pare de cobrar barato.",
+        "valor": 9,
+        "ph": "[capa: How to Price]",
+        "img": "assets/bonus-5.webp"
+      },
+      {
+        "rot": "Bônus 6",
+        "para": "Viagem",
+        "t": "Vacation & Swim Braids (Tranças para viagem e piscina)",
+        "p": "Modelos que aguentam piscina, mar e duas semanas sem mexer, e os cuidados com cloro e sal.",
+        "valor": 9,
+        "ph": "[capa: Vacation & Swim]",
+        "img": "assets/bonus-6.webp"
+      }
+    ]
+  },
+  "oferta": {
+    "kicker": "Escolha o seu plano",
+    "h2": "Leve o mapa hoje",
+    "sub": "Pagamento único. Acesso imediato por e-mail. Sem mensalidade.",
+    "de": "Valor:",
+    "precoNota": "pagamento único · acesso imediato",
+    "essencial": {
+      "nome": "Essencial",
+      "desc": "O guia",
+      "itens": [
+        "O guia com {{numModelos}} modelos (PDF)",
+        "Acesso vitalício"
+      ],
+      "cta": "Só o guia"
+    },
+    "completo": {
+      "selo": "Melhor custo-benefício · mais completo",
+      "nome": "Completo",
+      "desc": "O guia + 6 bônus",
+      "itens": [
+        "Tudo do Plano Essencial"
+      ],
+      "eco": "Você economiza {{p.ecoCompleto}}",
+      "cta": "Sim, quero o Plano Completo"
+    },
+    "imgEssencial": "",
+    "imgCompleto": "assets/pacote.webp",
+    "altCompleto": "O guia The Braid Map no centro com os 6 bônus em volta"
+  },
+  "garantia": {
+    "selo": "dias de<br>garantia",
+    "h2": "Garantia de {{garantiaDias}} dias",
+    "p": "Experimente o guia. Se não for para você, mande um e-mail em até {{garantiaDias}} dias e devolvemos 100% do valor."
+  },
+  "faq": {
+    "kicker": "Dúvidas",
+    "h2": "Perguntas frequentes",
+    "cta": "Escolher meu plano",
+    "itens": [
+      {
+        "q": "Quantos pacotes de cabelo eu preciso?",
+        "a": "Depende do tamanho e do comprimento. A Parte 1 tem uma tabela de pacotes por tamanho e comprimento, para criança e adulta, e cada ficha diz quantos pacotes aquele modelo pede. Chega de comprar 3 e faltar no meio."
+      },
+      {
+        "q": "Qual a diferença entre small, smedium, medium, large e jumbo?",
+        "a": "O guia de tamanhos define cada um com números: tamanho da divisão, número médio de tranças e tempo. Cada mapa também mostra o tamanho da divisão fileira por fileira, em polegadas e cm, e o “médio” deixa de ser chute."
+      },
+      {
+        "q": "Quanto cabelo eu coloco, e quando?",
+        "a": "O capítulo de feed-in mostra onde entra a primeira mecha, quanto usar e quando pôr a segunda e a terceira, para a raiz ficar lisa. O mapa de cada modelo tem a sua própria tabela de feed-in."
+      },
+      {
+        "q": "Cruzo por cima ou por baixo? Sou canhota.",
+        "a": "O capítulo da pegada explica os dois jeitos e como escolher um e não trocar no meio, que é o que deixa as tranças por igual. Quem é canhota segue os mesmos passos pelo outro lado."
+      },
+      {
+        "q": "Como eu faço a nuca na minha própria cabeça?",
+        "a": "O mapa diz onde vai cada seção antes de você começar, então você trabalha pela contagem, não pelo olho. O bônus Do It On Yourself (Plano Completo) traz a montagem dos espelhos e uma ordem que poupa o braço."
+      },
+      {
+        "q": "Quanto tempo eu vou levar?",
+        "a": "Cada ficha traz um tempo estimado. Os modelos do Nível 1 têm divisões maiores e menos tranças, então são os mais rápidos. Com criança, o guia mostra como dividir o penteado em sessões mais curtas."
+      },
+      {
+        "q": "Eu nunca trancei. É para mim?",
+        "a": "Sim. Comece pela Parte 1 e pelos modelos do Nível 1: divisões grandes, menos tranças e todos os números explicados. Suba para o Nível 2 e o 3 quando estiver pronta."
+      },
+      {
+        "q": "Dá para fazer em cabelo curto ou muito cacheado? Tenho que alisar antes?",
+        "a": "A parte de Preparação explica como lavar, secar e esticar o cabelo antes de trançar, e cada ficha diz em que comprimento o modelo funciona melhor."
+      },
+      {
+        "q": "Que gel, mousse ou edge control eu uso?",
+        "a": "O capítulo de material lista tudo o que você precisa e para que serve cada produto. Não exige marca: compre o que você já confia."
+      },
+      {
+        "q": "Vai doer? Vai estragar o baby hair (edges)?",
+        "a": "Trança puxada demais na raiz força a linha do cabelo. O guia mostra como deixar a raiz firme sem puxar e quais tamanhos são mais leves. Ele não faz nenhuma promessa sobre saúde ou crescimento do cabelo. Se algo doer, pare e afrouxe."
+      },
+      {
+        "q": "É um curso em vídeo? Como eu recebo?",
+        "a": "É um guia em PDF para imprimir, com mapas, tabelas e passos ilustrados. Logo depois do pagamento você recebe um e-mail com o acesso. Dá para ler no celular, no tablet ou no computador, ou imprimir."
+      },
+      {
+        "q": "É assinatura?",
+        "a": "Não. É pagamento único, com acesso vitalício."
+      },
+      {
+        "q": "E se eu não gostar?",
+        "a": "Você tem {{garantiaDias}} dias de garantia. É só mandar um e-mail e devolvemos 100% do valor."
+      }
+    ]
+  },
+  "rodape": {
+    "direitos": "© 2026 {{nome}}. Todos os direitos reservados.",
+    "termos": "Termos de uso",
+    "privacidade": "Política de privacidade",
+    "aviso": "Este guia ensina técnicas de penteado. Não é orientação médica e não faz nenhuma promessa sobre crescimento do cabelo ou saúde do couro cabeludo. O resultado depende de prática.",
+    "meta": "Este site não faz parte do Facebook nem da Facebook Inc. e não é endossado pelo Facebook de forma alguma."
+  },
+  "popup": {
+    "fechar": "Fechar",
+    "kicker": "Espera, oferta única",
+    "h3": "Leve os 6 bônus por só {{p.difPopup}} a mais",
+    "sub": "Passe para o Plano Completo: o guia inteiro mais os 6 bônus (Faça em você mesma, 20 modelos infantis de volta às aulas, Os 20 modelos que mais vendem, Como lavar o cabelo trançado, Como precificar suas tranças e Tranças para viagem e piscina).",
+    "dif": "só {{p.difPopup}} a mais que o Essencial",
+    "sim": "Sim, quero passar para o Completo",
+    "nao": "Não, obrigada, só o guia"
+  },
+  "promo": {
+    "titulo": "Espera: {{nome}} por {{p.saida}}",
+    "topo": "Antes de você ir: um preço menor, só nesta página",
+    "pill": "Última chance",
+    "h1": "Leve o guia completo por só {{p.saida}}",
+    "sub": "O mesmo guia, os mesmos {{numModelos}} modelos. Preço único, só nesta página.",
+    "ph": "[mockup do PDF]",
+    "itens": [
+      "Parte 1: Preparação (material, tamanhos, pacotes, divisão, feed-in, pegada, criança)",
+      "{{numModelos}} modelos por nível, cada um com ficha, mapa de divisão e os passos",
+      "PDF para imprimir, acesso imediato por e-mail",
+      "Garantia de {{garantiaDias}} dias"
+    ],
+    "de": "Preço normal",
+    "por": "só hoje:",
+    "cta": "Sim, quero por {{p.saida}}",
+    "nota": "Pagamento único. Esta oferta não vai aparecer de novo."
+  },
+  "topo": "Oferta limitada · Termina hoje"
+}
