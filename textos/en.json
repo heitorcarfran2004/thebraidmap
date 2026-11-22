@@ -43,7 +43,7 @@
   "hero": {
     "ph": "[mockup do PDF: capa + páginas abertas do guia]",
     "selo": "The ultimate braid guide",
-    "h1": "<span class=\"forte\"><span class=\"cor\">Master</span> {{numModelos}} Braid Styles</span> <span class=\"resto\">A Visual <span style=\"white-space:nowrap\">Step-by-Step</span> Guide, Beginner to Advanced</span>",
+    "h1": "<span class=\"forte\">Master {{numModelos}} Braid Styles</span> <span class=\"resto\">A Visual <span style=\"white-space:nowrap\">Step-by-Step</span> Guide, Beginner to Advanced</span>",
     "sub": "Every style comes with its parting map, the exact numbers and a visual step-by-step.",
     "lista": [
       "Knotless, box braids, boho, goddess, stitch, fulani and more",
