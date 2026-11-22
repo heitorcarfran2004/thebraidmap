@@ -205,7 +205,7 @@
         "p": "Todos os modelos com nível e tempo, para você escolher pelo tempo que tem."
       }
     ],
-    "cta": "Quero ver os planos",
+    "cta": "Quero os {{numModelos}} modelos",
     "img": "assets/r4v2-tres.webp",
     "alt": "As 3 páginas de um modelo: ficha, mapa de divisão e passo a passo"
   },
@@ -309,7 +309,7 @@
   "faq": {
     "kicker": "Dúvidas",
     "h2": "Perguntas frequentes",
-    "cta": "Escolher meu plano",
+    "cta": "Quero os {{numModelos}} modelos",
     "itens": [
       {
         "q": "Quantos pacotes de cabelo eu preciso?",

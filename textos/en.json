@@ -200,7 +200,7 @@
         "p": "Every style with its level and time, so you can pick by the time you have."
       }
     ],
-    "cta": "Show me the plans",
+    "cta": "I want the {{numModelos}} styles",
     "img": "assets/en-tres.webp",
     "alt": "The 3 pages of one style: style sheet, parting map and step-by-step"
   },
@@ -304,7 +304,7 @@
   "faq": {
     "kicker": "Questions",
     "h2": "Frequently asked questions",
-    "cta": "Choose my plan",
+    "cta": "I want the {{numModelos}} styles",
     "itens": [
       {
         "q": "How many packs of hair do I need?",
