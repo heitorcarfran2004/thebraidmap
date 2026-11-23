@@ -534,6 +534,8 @@ h3{font-size:clamp(20px,2.6vw,23px)}
   var ultimoFoco = null;
   function fechar() { modal.hidden = true; document.body.style.overflow = ''; if (ultimoFoco) ultimoFoco.focus(); }
   essencial.addEventListener('click', function (e) {
+    // sem link do popup (TROCAR), o Essencial vai direto ao checkout dele
+    if (eTrocar(document.getElementById('upsell-sim'))) { if (eTrocar(essencial)) { e.preventDefault(); alert(AVISO); return; } marca(essencial); return; }
     e.preventDefault();
     ultimoFoco = document.activeElement;
     modal.hidden = false; document.body.style.overflow = 'hidden';

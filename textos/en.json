@@ -25,8 +25,8 @@
     },
     "garantiaDias": 7,
     "checkout": {
-      "essencial": "TROCAR-CHECKOUT-ESSENCIAL",
-      "completo": "TROCAR-CHECKOUT-COMPLETO",
+      "essencial": "https://pay.hotmart.com/D108621033Q?off=zgkc322g&checkoutMode=10",
+      "completo": "https://pay.hotmart.com/D108621033Q?off=6o42yd3w&checkoutMode=10",
       "popup": "TROCAR-CHECKOUT-POPUP",
       "saida": "TROCAR-CHECKOUT-SAIDA"
     },

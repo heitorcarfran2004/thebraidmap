@@ -14,8 +14,8 @@
      O QUE TROCAR ANTES DE SUBIR (tudo no textos/en.json, bloco "config"):
        config.pixelMeta              TROCAR-PIXEL-META   (enquanto tiver TROCAR, o pixel não carrega)
        config.utmifyPixel            TROCAR-UTMIFY-ID    (enquanto tiver TROCAR, o pixel da UTMify não carrega)
-       config.checkout.essencial     US$ 9,90  Plano Essencial  -> TROCAR-CHECKOUT-ESSENCIAL
-       config.checkout.completo      US$ 19,90  Plano Completo   -> TROCAR-CHECKOUT-COMPLETO
+       config.checkout.essencial     US$ 9,90  Plano Essencial  -> https://pay.hotmart.com/D108621033Q?off=zgkc322g&checkoutMode=10
+       config.checkout.completo      US$ 19,90  Plano Completo   -> https://pay.hotmart.com/D108621033Q?off=6o42yd3w&checkoutMode=10
        config.checkout.popup         US$ 14,90  popup de upgrade -> TROCAR-CHECKOUT-POPUP
        config.checkout.saida         US$ 7,90  back redirect    -> TROCAR-CHECKOUT-SAIDA
      Botões com TROCAR mostram um aviso em vez de ir ao checkout. O back redirect só liga com link https.
@@ -391,7 +391,7 @@ h3{font-size:clamp(20px,2.6vw,23px)}
         <div class="preco">US$ 9,90</div>
         <p class="preco-nota">pagamento único · acesso imediato</p>
         <!-- CHECKOUT Plano Essencial (US$ 9,90): config.checkout.essencial. Abre o popup de upgrade antes. -->
-        <a class="btn" id="btn-essencial" data-checkout data-valor="9.9" href="TROCAR-CHECKOUT-ESSENCIAL">Só o guia</a>
+        <a class="btn" id="btn-essencial" data-checkout data-valor="9.9" href="https://pay.hotmart.com/D108621033Q?off=zgkc322g&checkoutMode=10">Só o guia</a>
       </div>
       <div class="plano completo">
         <span class="selo">Melhor custo-benefício · mais completo</span>
@@ -405,7 +405,7 @@ h3{font-size:clamp(20px,2.6vw,23px)}
         <p class="preco-nota">pagamento único · acesso imediato</p>
         <span class="eco">Você economiza US$ 61,10</span>
         <!-- CHECKOUT Plano Completo (US$ 19,90): config.checkout.completo -->
-        <a class="btn" data-checkout data-valor="19.9" href="TROCAR-CHECKOUT-COMPLETO">Sim, quero o Plano Completo</a>
+        <a class="btn" data-checkout data-valor="19.9" href="https://pay.hotmart.com/D108621033Q?off=6o42yd3w&checkoutMode=10">Sim, quero o Plano Completo</a>
       </div>
     </div>
   </div>
@@ -544,6 +544,8 @@ h3{font-size:clamp(20px,2.6vw,23px)}
   var ultimoFoco = null;
   function fechar() { modal.hidden = true; document.body.style.overflow = ''; if (ultimoFoco) ultimoFoco.focus(); }
   essencial.addEventListener('click', function (e) {
+    // sem link do popup (TROCAR), o Essencial vai direto ao checkout dele
+    if (eTrocar(document.getElementById('upsell-sim'))) { if (eTrocar(essencial)) { e.preventDefault(); alert(AVISO); return; } marca(essencial); return; }
     e.preventDefault();
     ultimoFoco = document.activeElement;
     modal.hidden = false; document.body.style.overflow = 'hidden';
