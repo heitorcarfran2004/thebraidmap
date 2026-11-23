@@ -86,7 +86,8 @@ for (const idioma of pedidos) {
   fs.mkdirSync(pastaSaida, { recursive: true });
   for (const arq of fs.readdirSync(path.join(__dirname, '_fonte')).filter((f) => f.endsWith('.html'))) {
     const tpl = fs.readFileSync(path.join(__dirname, '_fonte', arq), 'utf8');
-    fs.writeFileSync(path.join(pastaSaida, arq), render(tpl, [T], 0));
+    // performance (PageSpeed): fontes locais, lazy, srcset e minificação; ver _otimizar.cjs
+    fs.writeFileSync(path.join(pastaSaida, arq), require('./_otimizar.cjs')(render(tpl, [T], 0), T.base));
     console.log('ok [' + idioma + ']', path.relative(__dirname, path.join(pastaSaida, arq)));
   }
   if (faltando.size) { console.log('TEXTOS QUE FALTAM no ' + idioma + '.json:', [...faltando].join(', ')); erro = true; }

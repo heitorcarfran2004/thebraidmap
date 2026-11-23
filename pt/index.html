@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<!-- GERADO por _montar.cjs a partir de _fonte/index.html + textos/<idioma>.json. Não edite o index.html na mão. -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>[PT · revisão] O Mapa das Tranças: 50 modelos passo a passo</title>
@@ -9,560 +8,168 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#1E1A17">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%231E1A17%22/><path d=%22M30 20v60M50 20v60M70 20v60M20 40h60M20 60h60%22 stroke=%22%23D9A27A%22 stroke-width=%225%22/></svg>">
-
-<!-- ============================================================
-     O QUE TROCAR ANTES DE SUBIR (tudo no textos/en.json, bloco "config"):
-       config.pixelMeta              TROCAR-PIXEL-META   (enquanto tiver TROCAR, o pixel não carrega)
-       config.utmifyPixel            TROCAR-UTMIFY-ID    (enquanto tiver TROCAR, o pixel da UTMify não carrega)
-       config.checkout.essencial     US$ 9,90  Plano Essencial  -> https://pay.hotmart.com/D108621033Q?off=zgkc322g&checkoutMode=10
-       config.checkout.completo      US$ 19,90  Plano Completo   -> https://pay.hotmart.com/D108621033Q?off=6o42yd3w&checkoutMode=10
-       config.checkout.popup         US$ 14,90  popup de upgrade -> TROCAR-CHECKOUT-POPUP
-       config.checkout.saida         US$ 7,90  back redirect    -> TROCAR-CHECKOUT-SAIDA
-     Botões com TROCAR mostram um aviso em vez de ir ao checkout. O back redirect só liga com link https.
-     ============================================================ -->
-<script>
-  window.PIXEL_META_ID = 'TROCAR-PIXEL-META';
-  window.UTMIFY_ID = 'TROCAR-UTMIFY-ID';
-  if (window.PIXEL_META_ID.indexOf('TROCAR') === -1) {
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', window.PIXEL_META_ID);
-    fbq('track', 'PageView');
-  }
-  if (window.UTMIFY_ID.indexOf('TROCAR') === -1) {
-    window.pixelId = window.UTMIFY_ID;
-    var a = document.createElement('script'); a.async = true; a.defer = true;
-    a.src = 'https://cdn.utmify.com.br/scripts/pixel/pixel.js'; document.head.appendChild(a);
-  }
-</script>
-<!-- UTMify: guarda as UTMs da campanha (sempre ligado) -->
+<script>if(window.PIXEL_META_ID="TROCAR-PIXEL-META",window.UTMIFY_ID="TROCAR-UTMIFY-ID",window.PIXEL_META_ID.indexOf("TROCAR")===-1&&(function(t,d,o,c,e,i,n){t.fbq||(e=t.fbq=function(){e.callMethod?e.callMethod.apply(e,arguments):e.queue.push(arguments)},t._fbq||(t._fbq=e),e.push=e,e.loaded=!0,e.version="2.0",e.queue=[],i=d.createElement(o),i.async=!0,i.src=c,n=d.getElementsByTagName(o)[0],n.parentNode.insertBefore(i,n))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js"),fbq("init",window.PIXEL_META_ID),fbq("track","PageView")),window.UTMIFY_ID.indexOf("TROCAR")===-1){window.pixelId=window.UTMIFY_ID;var a=document.createElement("script");a.async=!0,a.defer=!0,a.src="https://cdn.utmify.com.br/scripts/pixel/pixel.js",document.head.appendChild(a)}</script>
 <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500;1,6..72,600&family=Inter:wght@400;500;600;700;800&display=swap">
-<style>
-:root{
-  --tinta:#1E1A17; --tinta2:#2A2521; --texto:#2B2622; --mudo:#6A6159;
-  --papel:#FBF8F3; --areia:#F2ECE2; --linha:#E3D9CA; --branco:#fff;
-  --argila:#9A4A2B; --argila-clara:#F4E3D8; --pele:#D9A27A; --ouro:#B8862B;
-  --cta:#1E6A46; --cta-esc:#165237; --verde-claro:#EAF4EE; --vermelho:#A23B2A;
-  --serif:"Newsreader",Georgia,"Times New Roman",serif;
-  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--texto);background:var(--papel);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{max-width:100%;height:auto;display:block}
-b,strong{font-weight:700;color:var(--tinta)}
-.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
-.col{max-width:760px;margin:0 auto}
-section{padding:68px 0}
-@media (max-width:640px){section{padding:52px 0}}
-h1,h2,h3{font-family:var(--serif);color:var(--tinta);font-weight:600;letter-spacing:-.01em;line-height:1.14}
-h2{font-size:clamp(29px,5.2vw,42px)}
-h2 em{font-style:italic;color:var(--argila)}
-h3{font-size:clamp(20px,2.6vw,23px)}
-.kicker{display:block;font:700 12.5px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--argila);margin-bottom:12px}
-.centro{text-align:center}
-.lead{font-size:18px;margin-top:14px;color:var(--texto)}
-.escuro{background:var(--tinta);color:#DDD3C7}
-.escuro h2,.escuro h3,.escuro b{color:#fff}
-.escuro .kicker{color:var(--pele)}
-.escuro .lead,.escuro p{color:#DDD3C7}
-.areia{background:var(--areia)}
-.branco{background:var(--branco)}
-
-/* botão */
-.btn{display:block;width:100%;max-width:500px;margin:30px auto 0;background:var(--cta);color:#fff;text-decoration:none;text-align:center;
-  font:700 18px/1.3 var(--sans);padding:20px 24px;border-radius:10px;
-  box-shadow:0 12px 26px -12px rgba(30,106,70,.7),inset 0 -3px 0 rgba(0,0,0,.18);transition:background .2s,transform .2s}
-.btn:hover{background:var(--cta-esc);transform:translateY(-1px)}
-
-/* placeholder de imagem (a página vai sem imagens até o entregável existir) */
-.ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;border:1.5px dashed #BFB09C;border-radius:12px;
-  background:repeating-linear-gradient(135deg,#F5EFE6 0 12px,#F1EADF 12px 24px);color:#8A7B69;font:600 13px/1.4 var(--sans)}
-.escuro .ph{background:rgba(255,255,255,.04);border-color:rgba(217,162,122,.45);color:#C9B7A5}
-
-/* 1 · hero */
-.hero{padding:44px 0 60px;background:linear-gradient(180deg,var(--papel) 0%,var(--areia) 100%)}
-.hero-grade{display:grid;gap:34px;align-items:center}
-@media (min-width:900px){.hero-grade{grid-template-columns:1.1fr .9fr;gap:52px}}
-.selo-topo{display:inline-block;font:700 12.5px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--argila);
-  border:1px solid #DDC3B2;background:#FFF9F4;padding:7px 12px;border-radius:999px}
-.hero h1{font-size:clamp(28px,3.6vw,40px);line-height:1.16;margin-top:16px}
-.hero h1 .nome{display:block;font-size:.6em;font-weight:700;color:var(--argila);margin-bottom:10px}
-.hero h1{color:var(--argila)}
-.hero h1 .forte{display:block;color:var(--tinta);font-size:1.1em;white-space:nowrap;line-height:1.1}
-.hero h1 .resto{display:block;margin-top:6px;text-wrap:balance}
-.hero h1 .forte .cor{color:var(--argila)}
-.hero h1 em{color:var(--argila);white-space:nowrap}
-.hero .sub{margin-top:16px;font-size:18px}
-.hero .lista{list-style:none;margin-top:18px;display:grid;gap:8px}
-.hero .lista li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:16.5px}
-.ok::before,.hero .lista li::before{content:"";width:18px;height:18px;margin-top:4px;border-radius:50%;background:var(--cta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
-.hero .btn{margin-left:0}
-@media (max-width:899px){.hero .btn{margin-left:auto}}
-.numeros{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px;max-width:500px}
-@media (max-width:899px){.numeros{margin-left:auto;margin-right:auto}}
-.numeros div{background:var(--branco);border:1px solid var(--linha);border-radius:10px;padding:10px 4px;text-align:center}
-.numeros b{display:block;font:600 25px/1 var(--serif);color:var(--argila)}
-.numeros span{display:block;font-size:11.5px;color:var(--mudo);margin-top:4px;line-height:1.25}
-.hero .ph-d{aspect-ratio:4/5}
-.hero .ph-m{display:none;aspect-ratio:4/3;margin-top:20px}
-@media (max-width:899px){.hero .ph-m{display:flex}.hero .ph-d{display:none}}
-
-/* carrossel (placeholders de páginas) */
-.carrossel{position:relative;margin-top:34px}
-.trilho{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 12px;scrollbar-width:none}
-.trilho::-webkit-scrollbar{display:none}
-.slide{flex:0 0 clamp(220px,30%,300px);scroll-snap-align:center;margin:0}
-.slide .ph{aspect-ratio:210/297;background-color:#fff}
-.slide figcaption{font-size:13.5px;color:var(--mudo);text-align:center;margin-top:8px}
-.seta{position:absolute;top:42%;width:42px;height:42px;border-radius:50%;border:1px solid var(--linha);background:#fff;color:var(--tinta);font-size:20px;cursor:pointer;box-shadow:0 6px 16px rgba(30,26,23,.12);z-index:2}
-.seta.ant{left:-6px}.seta.prox{right:-6px}
-@media (max-width:640px){.seta{display:none}}
-.pontos{display:flex;justify-content:center;gap:6px;margin-top:10px}
-.pontos i{width:7px;height:7px;border-radius:50%;background:var(--linha)}
-.pontos i.on{width:22px;border-radius:4px;background:var(--argila)}
-
-/* bullets em 2 colunas */
-.checks{display:grid;gap:12px;margin-top:30px}
-@media (min-width:760px){.checks{grid-template-columns:1fr 1fr}}
-.checks li{list-style:none;display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;background:var(--branco);border:1px solid var(--linha);border-radius:10px;padding:14px 16px;font-weight:600;font-size:15.5px;color:var(--tinta)}
-.checks li::before{content:"✓";width:22px;height:22px;border-radius:50%;background:var(--verde-claro);color:var(--cta);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}
-
-
-/* 4 · benefícios */
-.beneficios{display:grid;gap:12px;margin-top:32px}
-@media (min-width:700px){.beneficios{grid-template-columns:1fr 1fr}}
-@media (min-width:1000px){.beneficios{grid-template-columns:repeat(3,1fr)}}
-.ben{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px;background:rgba(255,255,255,.03)}
-.ben .n{font:600 24px/1.1 var(--serif);color:var(--pele)}
-.ben h3{font:700 16.5px/1.3 var(--sans);color:#fff}
-.ben p{font-size:15px;margin-top:3px}
-
-/* 5 · antes e depois: imagem única com os rótulos dentro */
-.ad{margin:20px auto 0;max-width:900px}
-.ad img{width:100%;border-radius:14px;box-shadow:0 20px 44px -24px rgba(30,26,23,.45)}
-.ad figcaption{text-align:center;font-size:15px;color:var(--mudo);margin-top:10px}
-/* 6 · o que você recebe */
-.recebe-grade{display:grid;gap:30px;margin-top:34px;align-items:center}
-@media (min-width:900px){.recebe-grade{grid-template-columns:.9fr 1.1fr}}
-.recebe-grade > .ph{aspect-ratio:1/1}
-.tres-pag{display:block;width:100%;max-width:1000px;margin:26px auto 0}
-.slide img{width:100%;border-radius:6px;box-shadow:0 12px 26px -12px rgba(30,26,23,.35);background:#fff}
-.bon .capa-b{width:96px;border-radius:6px;box-shadow:0 8px 18px -8px rgba(30,26,23,.45)}
-.itens-r{list-style:none;display:grid;gap:12px;margin-top:22px}
-@media (min-width:860px){.itens-r{grid-template-columns:1fr 1fr}}
-.itens-r li{display:grid;grid-template-columns:44px 1fr;gap:12px;background:var(--branco);border:1px solid var(--linha);border-radius:12px;padding:14px 16px}
-.itens-r .n{width:44px;height:44px;border-radius:10px;background:var(--tinta);color:var(--pele);display:flex;align-items:center;justify-content:center;font:600 20px/1 var(--serif)}
-.itens-r h3{font:700 16.5px/1.3 var(--sans);color:var(--tinta)}
-.itens-r p{font-size:14.8px;color:var(--mudo);margin-top:2px;line-height:1.5}
-
-/* 7 · bônus */
-.bonus-grade{display:grid;gap:14px;margin-top:32px}
-@media (min-width:760px){.bonus-grade{grid-template-columns:1fr 1fr}}
-@media (min-width:1000px){.bonus-grade{grid-template-columns:repeat(3,1fr)}}
-.bon{background:var(--branco);border:1px solid var(--linha);border-radius:14px;padding:16px;display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start}
-.bon .ph{aspect-ratio:3/4;font-size:11.5px;padding:6px}
-.bon .rot{font:700 11.5px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--argila)}
-.bon .para{display:inline-block;font:700 10.5px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--cta);background:var(--verde-claro);padding:3px 6px;border-radius:4px;margin-left:4px}
-.bon h3{font-size:19.5px;margin-top:5px}
-.bon p{font-size:14.5px;margin-top:5px}
-.bon .val{margin-top:8px;font-size:13.5px;color:var(--mudo)}
-.bon .val s{color:var(--vermelho)}
-.bon .val b{color:var(--cta)}
-
-/* 8 · oferta */
-.planos-grade{display:grid;gap:22px;margin-top:38px;align-items:center}
-@media (min-width:860px){.planos-grade{grid-template-columns:.9fr 1.1fr;max-width:960px;margin-left:auto;margin-right:auto}}
-.plano{position:relative;background:var(--branco);border:1px solid var(--linha);border-radius:16px;padding:26px 22px 22px}
-.plano h3{text-align:center;font-size:26px}
-.plano .p-desc{text-align:center;color:var(--mudo);font-size:15px;margin-top:4px}
-.plano ul{list-style:none;margin-top:18px;display:grid;gap:8px}
-.plano li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:15.3px;line-height:1.45}
-.plano li::before{content:"✓";color:var(--cta);font-weight:800}
-.plano li.b::before{content:"+";color:var(--argila);font-weight:800}
-.plano .de{text-align:center;margin-top:20px;color:var(--mudo);font-size:15px}
-.plano .de s{color:var(--vermelho)}
-.plano .preco{text-align:center;font:600 52px/1 var(--serif);color:var(--tinta);margin-top:6px}
-.plano .preco-nota{text-align:center;font-size:13.5px;color:var(--mudo);margin-top:6px}
-.plano .btn{margin-top:18px;font-size:17px}
-.plano.essencial .btn{background:#fff;color:var(--tinta);border:1.5px solid var(--tinta);box-shadow:none}
-.plano.essencial .btn:hover{background:var(--areia)}
-.plano.completo{border:2px solid var(--tinta);box-shadow:0 30px 60px -30px rgba(30,26,23,.55);padding-top:34px}
-@media (min-width:860px){.plano.completo{transform:scale(1.03)}}
-.plano.completo .selo{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--argila);color:#fff;font:700 12.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:999px;white-space:nowrap}
-.plano.completo .preco{font-size:62px;color:var(--cta)}
-.plano.completo .eco{display:block;text-align:center;margin-top:8px;color:var(--cta);font-weight:700;font-size:14.5px}
-
-.plano-img{display:block;width:100%;max-width:440px;margin:0 auto 10px}
-.plano-img.pequena{max-width:110px;margin-bottom:12px}
-.plano.essencial{padding-top:22px}
-.plano.essencial h3{font-size:22px}
-.plano.essencial .preco{font-size:44px;margin-top:16px}
-.plano.essencial li{font-size:14.5px;color:var(--mudo)}
-
-/* 9 · garantia */
-.garantia{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:left}
-.selo-g{flex:none;width:112px;height:112px;border-radius:50%;border:2px solid var(--tinta);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:inset 0 0 0 5px var(--papel),inset 0 0 0 6px var(--tinta)}
-.selo-g b{font:600 38px/1 var(--serif)}
-.selo-g span{font:700 9.5px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
-.garantia div:last-child{max-width:520px}
-.garantia h2{font-size:clamp(24px,3.6vw,30px)}
-.garantia p{margin-top:6px}
-
-/* faixa do topo */
-.topo{background:var(--argila);color:#fff;text-align:center;font:700 13.5px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:11px 16px}
-/* mockup do hero (imagem real) */
-.mock-d{width:100%;border-radius:12px}
-.mock-m{display:none;width:100%;margin-top:18px;border-radius:12px}
-@media (max-width:899px){.mock-m{display:block}.mock-d{display:none}}
-/* dores: 3 perfis + 2 dores comuns */
-.perfis{display:grid;gap:16px;margin-top:34px}
-@media (min-width:860px){.perfis{grid-template-columns:repeat(3,1fr)}}
-.perfil{background:var(--branco);border:1px solid var(--linha);border-radius:16px;padding:24px 22px;box-shadow:0 18px 40px -30px rgba(30,26,23,.45);position:relative;overflow:hidden}
-.perfil::after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--argila)}
-.perfil:nth-child(2)::after{background:var(--tinta)}
-.perfil:nth-child(3)::after{background:var(--ouro)}
-.perfil .ico{width:48px;height:48px;border-radius:50%;background:var(--argila-clara);display:flex;align-items:center;justify-content:center}
-.perfil .ico svg{width:24px;height:24px;stroke:var(--argila);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.perfil .tag-p{display:block;font:700 11.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mudo);margin-top:16px}
-.perfil h3{font-size:22px;margin-top:6px}
-.perfil p{font-size:15.5px;margin-top:8px}
-.comuns-tit{text-align:center;font:600 21px/1.3 var(--serif);color:var(--tinta);margin-top:40px}
-.comuns{display:grid;gap:12px;margin-top:16px;max-width:880px;margin-left:auto;margin-right:auto}
-@media (min-width:760px){.comuns{grid-template-columns:1fr 1fr}}
-.comum{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;background:var(--tinta);border-radius:14px;padding:18px 18px}
-.comum .x{width:30px;height:30px;border-radius:50%;background:rgba(224,132,111,.16);color:#E0846F;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
-.comum h3{font-size:19px;color:#fff}
-.comum p{font-size:15px;color:#D8CFC4;margin-top:4px}
-.ad-tit{text-align:center;font-size:clamp(23px,3.4vw,30px);margin-top:48px}
-/* faq */
-.faq{margin-top:28px;border-top:1px solid var(--linha)}
-.faq details{border-bottom:1px solid var(--linha)}
-.faq summary{cursor:pointer;list-style:none;padding:17px 34px 17px 0;position:relative;font:600 16.5px/1.4 var(--sans);color:var(--tinta)}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:4px;top:13px;font:400 26px/1 var(--sans);color:var(--argila)}
-.faq details[open] summary::after{content:"–"}
-.faq .resp{padding:0 0 17px;font-size:15.8px}
-
-/* rodapé */
-.rodape{background:var(--tinta);color:#A99C8E;font-size:13px;text-align:center;padding:30px 16px}
-.rodape a{color:#D8CBBB}
-.rodape p + p{margin-top:8px}
-
-/* popup de upgrade */
-.modal[hidden]{display:none}
-.modal{position:fixed;inset:0;z-index:99;display:flex;align-items:center;justify-content:center;padding:16px}
-.modal-fundo{position:absolute;inset:0;background:rgba(30,26,23,.72)}
-.modal-caixa{position:relative;background:var(--papel);border-radius:16px;padding:30px 22px 22px;width:100%;max-width:460px;text-align:center;max-height:92vh;overflow-y:auto;box-shadow:0 30px 70px rgba(0,0,0,.4)}
-.modal-x{position:absolute;top:8px;right:10px;background:none;border:none;font-size:28px;line-height:1;color:var(--mudo);cursor:pointer;padding:6px}
-.modal-caixa h3{font-size:clamp(23px,4vw,28px);margin-top:4px}
-.modal-sub{font-size:15.5px;margin-top:10px}
-.modal-preco{border:1.5px dashed #9FCDB2;background:var(--verde-claro);border-radius:12px;padding:16px;margin:18px 0}
-.modal-preco s{color:var(--mudo)}
-.modal-valor{font:600 46px/1 var(--serif);color:var(--cta);margin:4px 0 6px}
-.modal-preco span{display:block;font-size:13.5px;color:var(--cta);font-weight:700}
-.modal-caixa .btn{margin-top:0;max-width:none}
-.modal-nao{display:block;width:100%;margin-top:10px;background:none;border:1px solid var(--linha);border-radius:10px;padding:13px;font:600 14px/1.3 var(--sans);color:var(--mudo);cursor:pointer}
-</style>
-<!-- CashFlow (rastreio) -->
+<link rel="preload" href="/assets/fonts/Newsreader-normal-2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/Inter-normal-0.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:Inter;font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/Inter-normal-0.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/Inter-normal-0.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/Inter-normal-0.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/Inter-normal-0.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Inter;font-style:normal;font-weight:800;font-display:swap;src:url(/assets/fonts/Inter-normal-0.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Newsreader;font-style:italic;font-weight:500;font-display:swap;src:url(/assets/fonts/Newsreader-italic-1.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Newsreader;font-style:italic;font-weight:600;font-display:swap;src:url(/assets/fonts/Newsreader-italic-1.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Newsreader;font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/Newsreader-normal-2.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Newsreader;font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/Newsreader-normal-2.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Newsreader;font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/Newsreader-normal-2.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}</style>
+<style>:root{--tinta:#1E1A17;--tinta2:#2A2521;--texto:#2B2622;--mudo:#6A6159;--papel:#FBF8F3;--areia:#F2ECE2;--linha:#E3D9CA;--branco:#fff;--argila:#9A4A2B;--argila-clara:#F4E3D8;--pele:#D9A27A;--ouro:#B8862B;--cta:#1E6A46;--cta-esc:#165237;--verde-claro:#EAF4EE;--vermelho:#A23B2A;--serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif}*{box-sizing:border-box;margin:0;padding:0}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}body{font-family:var(--sans);color:var(--texto);background:var(--papel);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;height:auto;display:block}b,strong{font-weight:700;color:var(--tinta)}.wrap{max-width:1080px;margin:0 auto;padding:0 16px}.col{max-width:760px;margin:0 auto}section{padding:68px 0}@media (max-width:640px){section{padding:52px 0}}h1,h2,h3{font-family:var(--serif);color:var(--tinta);font-weight:600;letter-spacing:-.01em;line-height:1.14}h2{font-size:clamp(29px,5.2vw,42px)}h2 em{font-style:italic;color:var(--argila)}h3{font-size:clamp(20px,2.6vw,23px)}.kicker{display:block;font:700 12.5px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--argila);margin-bottom:12px}.centro{text-align:center}.lead{font-size:18px;margin-top:14px;color:var(--texto)}.escuro{background:var(--tinta);color:#ddd3c7}.escuro h2,.escuro h3,.escuro b{color:#fff}.escuro .kicker{color:var(--pele)}.escuro .lead,.escuro p{color:#ddd3c7}.areia{background:var(--areia)}.branco{background:var(--branco)}.btn{display:block;width:100%;max-width:500px;margin:30px auto 0;background:var(--cta);color:#fff;text-decoration:none;text-align:center;font:700 18px/1.3 var(--sans);padding:20px 24px;border-radius:10px;box-shadow:0 12px 26px -12px #1e6a46b3,inset 0 -3px #0000002e;transition:background .2s,transform .2s}.btn:hover{background:var(--cta-esc);transform:translateY(-1px)}.ph{display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;border:1.5px dashed #BFB09C;border-radius:12px;background:repeating-linear-gradient(135deg,#f5efe6 0 12px,#f1eadf 12px 24px);color:#8a7b69;font:600 13px/1.4 var(--sans)}.escuro .ph{background:#ffffff0a;border-color:#d9a27a73;color:#c9b7a5}.hero{padding:44px 0 60px;background:linear-gradient(180deg,var(--papel) 0%,var(--areia) 100%)}.hero-grade{display:grid;gap:34px;align-items:center}@media (min-width:900px){.hero-grade{grid-template-columns:1.1fr .9fr;gap:52px}}.selo-topo{display:inline-block;font:700 12.5px/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--argila);border:1px solid #DDC3B2;background:#fff9f4;padding:7px 12px;border-radius:999px}.hero h1{font-size:clamp(28px,3.6vw,40px);line-height:1.16;margin-top:16px}.hero h1 .nome{display:block;font-size:.6em;font-weight:700;color:var(--argila);margin-bottom:10px}.hero h1{color:var(--argila)}.hero h1 .forte{display:block;color:var(--tinta);font-size:1.1em;white-space:nowrap;line-height:1.1}.hero h1 .resto{display:block;margin-top:6px;text-wrap:balance}.hero h1 .forte .cor{color:var(--argila)}.hero h1 em{color:var(--argila);white-space:nowrap}.hero .sub{margin-top:16px;font-size:18px}.hero .lista{list-style:none;margin-top:18px;display:grid;gap:8px}.hero .lista li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:16.5px}.ok:before,.hero .lista li:before{content:"";width:18px;height:18px;margin-top:4px;border-radius:50%;background:var(--cta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}.hero .btn{margin-left:0}@media (max-width:899px){.hero .btn{margin-left:auto}}.numeros{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px;max-width:500px}@media (max-width:899px){.numeros{margin-left:auto;margin-right:auto}}.numeros div{background:var(--branco);border:1px solid var(--linha);border-radius:10px;padding:10px 4px;text-align:center}.numeros b{display:block;font:600 25px/1 var(--serif);color:var(--argila)}.numeros span{display:block;font-size:11.5px;color:var(--mudo);margin-top:4px;line-height:1.25}.hero .ph-d{aspect-ratio:4/5}.hero .ph-m{display:none;aspect-ratio:4/3;margin-top:20px}@media (max-width:899px){.hero .ph-m{display:flex}.hero .ph-d{display:none}}.carrossel{position:relative;margin-top:34px}.trilho{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:4px 2px 12px;scrollbar-width:none}.trilho::-webkit-scrollbar{display:none}.slide{flex:0 0 clamp(220px,30%,300px);scroll-snap-align:center;margin:0}.slide .ph{aspect-ratio:210/297;background-color:#fff}.slide figcaption{font-size:13.5px;color:var(--mudo);text-align:center;margin-top:8px}.seta{position:absolute;top:42%;width:42px;height:42px;border-radius:50%;border:1px solid var(--linha);background:#fff;color:var(--tinta);font-size:20px;cursor:pointer;box-shadow:0 6px 16px #1e1a171f;z-index:2}.seta.ant{left:-6px}.seta.prox{right:-6px}@media (max-width:640px){.seta{display:none}}.pontos{display:flex;justify-content:center;gap:6px;margin-top:10px}.pontos i{width:7px;height:7px;border-radius:50%;background:var(--linha)}.pontos i.on{width:22px;border-radius:4px;background:var(--argila)}.checks{display:grid;gap:12px;margin-top:30px}@media (min-width:760px){.checks{grid-template-columns:1fr 1fr}}.checks li{list-style:none;display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;background:var(--branco);border:1px solid var(--linha);border-radius:10px;padding:14px 16px;font-weight:600;font-size:15.5px;color:var(--tinta)}.checks li:before{content:"\2713";width:22px;height:22px;border-radius:50%;background:var(--verde-claro);color:var(--cta);font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center}.beneficios{display:grid;gap:12px;margin-top:32px}@media (min-width:700px){.beneficios{grid-template-columns:1fr 1fr}}@media (min-width:1000px){.beneficios{grid-template-columns:repeat(3,1fr)}}.ben{display:grid;grid-template-columns:40px 1fr;gap:12px;align-items:start;border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px;background:#ffffff08}.ben .n{font:600 24px/1.1 var(--serif);color:var(--pele)}.ben h3{font:700 16.5px/1.3 var(--sans);color:#fff}.ben p{font-size:15px;margin-top:3px}.ad{margin:20px auto 0;max-width:900px}.ad img{width:100%;border-radius:14px;box-shadow:0 20px 44px -24px #1e1a1773}.ad figcaption{text-align:center;font-size:15px;color:var(--mudo);margin-top:10px}.recebe-grade{display:grid;gap:30px;margin-top:34px;align-items:center}@media (min-width:900px){.recebe-grade{grid-template-columns:.9fr 1.1fr}}.recebe-grade>.ph{aspect-ratio:1/1}.tres-pag{display:block;width:100%;max-width:1000px;margin:26px auto 0}.slide img{width:100%;border-radius:6px;box-shadow:0 12px 26px -12px #1e1a1759;background:#fff}.bon .capa-b{width:96px;border-radius:6px;box-shadow:0 8px 18px -8px #1e1a1773}.itens-r{list-style:none;display:grid;gap:12px;margin-top:22px}@media (min-width:860px){.itens-r{grid-template-columns:1fr 1fr}}.itens-r li{display:grid;grid-template-columns:44px 1fr;gap:12px;background:var(--branco);border:1px solid var(--linha);border-radius:12px;padding:14px 16px}.itens-r .n{width:44px;height:44px;border-radius:10px;background:var(--tinta);color:var(--pele);display:flex;align-items:center;justify-content:center;font:600 20px/1 var(--serif)}.itens-r h3{font:700 16.5px/1.3 var(--sans);color:var(--tinta)}.itens-r p{font-size:14.8px;color:var(--mudo);margin-top:2px;line-height:1.5}.bonus-grade{display:grid;gap:14px;margin-top:32px}@media (min-width:760px){.bonus-grade{grid-template-columns:1fr 1fr}}@media (min-width:1000px){.bonus-grade{grid-template-columns:repeat(3,1fr)}}.bon{background:var(--branco);border:1px solid var(--linha);border-radius:14px;padding:16px;display:grid;grid-template-columns:96px 1fr;gap:14px;align-items:start}.bon .ph{aspect-ratio:3/4;font-size:11.5px;padding:6px}.bon .rot{font:700 11.5px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--argila)}.bon .para{display:inline-block;font:700 10.5px/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;color:var(--cta);background:var(--verde-claro);padding:3px 6px;border-radius:4px;margin-left:4px}.bon h3{font-size:19.5px;margin-top:5px}.bon p{font-size:14.5px;margin-top:5px}.bon .val{margin-top:8px;font-size:13.5px;color:var(--mudo)}.bon .val s{color:var(--vermelho)}.bon .val b{color:var(--cta)}.planos-grade{display:grid;gap:22px;margin-top:38px;align-items:center}@media (min-width:860px){.planos-grade{grid-template-columns:.9fr 1.1fr;max-width:960px;margin-left:auto;margin-right:auto}}.plano{position:relative;background:var(--branco);border:1px solid var(--linha);border-radius:16px;padding:26px 22px 22px}.plano h3{text-align:center;font-size:26px}.plano .p-desc{text-align:center;color:var(--mudo);font-size:15px;margin-top:4px}.plano ul{list-style:none;margin-top:18px;display:grid;gap:8px}.plano li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:15.3px;line-height:1.45}.plano li:before{content:"\2713";color:var(--cta);font-weight:800}.plano li.b:before{content:"+";color:var(--argila);font-weight:800}.plano .de{text-align:center;margin-top:20px;color:var(--mudo);font-size:15px}.plano .de s{color:var(--vermelho)}.plano .preco{text-align:center;font:600 52px/1 var(--serif);color:var(--tinta);margin-top:6px}.plano .preco-nota{text-align:center;font-size:13.5px;color:var(--mudo);margin-top:6px}.plano .btn{margin-top:18px;font-size:17px}.plano.essencial .btn{background:#fff;color:var(--tinta);border:1.5px solid var(--tinta);box-shadow:none}.plano.essencial .btn:hover{background:var(--areia)}.plano.completo{border:2px solid var(--tinta);box-shadow:0 30px 60px -30px #1e1a178c;padding-top:34px}@media (min-width:860px){.plano.completo{transform:scale(1.03)}}.plano.completo .selo{position:absolute;top:-15px;left:50%;transform:translate(-50%);background:var(--argila);color:#fff;font:700 12.5px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:999px;white-space:nowrap}.plano.completo .preco{font-size:62px;color:var(--cta)}.plano.completo .eco{display:block;text-align:center;margin-top:8px;color:var(--cta);font-weight:700;font-size:14.5px}.plano-img{display:block;width:100%;max-width:440px;margin:0 auto 10px}.plano-img.pequena{max-width:110px;margin-bottom:12px}.plano.essencial{padding-top:22px}.plano.essencial h3{font-size:22px}.plano.essencial .preco{font-size:44px;margin-top:16px}.plano.essencial li{font-size:14.5px;color:var(--mudo)}.garantia{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:left}.selo-g{flex:none;width:112px;height:112px;border-radius:50%;border:2px solid var(--tinta);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;box-shadow:inset 0 0 0 5px var(--papel),inset 0 0 0 6px var(--tinta)}.selo-g b{font:600 38px/1 var(--serif)}.selo-g span{font:700 9.5px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}.garantia div:last-child{max-width:520px}.garantia h2{font-size:clamp(24px,3.6vw,30px)}.garantia p{margin-top:6px}.topo{background:var(--argila);color:#fff;text-align:center;font:700 13.5px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:11px 16px}.mock-d{width:100%;border-radius:12px}.mock-m{display:none;width:100%;margin-top:18px;border-radius:12px}@media (max-width:899px){.mock-m{display:block}.mock-d{display:none}}.perfis{display:grid;gap:16px;margin-top:34px}@media (min-width:860px){.perfis{grid-template-columns:repeat(3,1fr)}}.perfil{background:var(--branco);border:1px solid var(--linha);border-radius:16px;padding:24px 22px;box-shadow:0 18px 40px -30px #1e1a1773;position:relative;overflow:hidden}.perfil:after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--argila)}.perfil:nth-child(2):after{background:var(--tinta)}.perfil:nth-child(3):after{background:var(--ouro)}.perfil .ico{width:48px;height:48px;border-radius:50%;background:var(--argila-clara);display:flex;align-items:center;justify-content:center}.perfil .ico svg{width:24px;height:24px;stroke:var(--argila);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.perfil .tag-p{display:block;font:700 11.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mudo);margin-top:16px}.perfil h3{font-size:22px;margin-top:6px}.perfil p{font-size:15.5px;margin-top:8px}.comuns-tit{text-align:center;font:600 21px/1.3 var(--serif);color:var(--tinta);margin-top:40px}.comuns{display:grid;gap:12px;margin-top:16px;max-width:880px;margin-left:auto;margin-right:auto}@media (min-width:760px){.comuns{grid-template-columns:1fr 1fr}}.comum{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;background:var(--tinta);border-radius:14px;padding:18px}.comum .x{width:30px;height:30px;border-radius:50%;background:#e0846f29;color:#e0846f;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}.comum h3{font-size:19px;color:#fff}.comum p{font-size:15px;color:#d8cfc4;margin-top:4px}.ad-tit{text-align:center;font-size:clamp(23px,3.4vw,30px);margin-top:48px}.faq{margin-top:28px;border-top:1px solid var(--linha)}.faq details{border-bottom:1px solid var(--linha)}.faq summary{cursor:pointer;list-style:none;padding:17px 34px 17px 0;position:relative;font:600 16.5px/1.4 var(--sans);color:var(--tinta)}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";position:absolute;right:4px;top:13px;font:400 26px/1 var(--sans);color:var(--argila)}.faq details[open] summary:after{content:"\2013"}.faq .resp{padding:0 0 17px;font-size:15.8px}.rodape{background:var(--tinta);color:#a99c8e;font-size:13px;text-align:center;padding:30px 16px}.rodape a{color:#d8cbbb}.rodape p+p{margin-top:8px}.modal[hidden]{display:none}.modal{position:fixed;inset:0;z-index:99;display:flex;align-items:center;justify-content:center;padding:16px}.modal-fundo{position:absolute;inset:0;background:#1e1a17b8}.modal-caixa{position:relative;background:var(--papel);border-radius:16px;padding:30px 22px 22px;width:100%;max-width:460px;text-align:center;max-height:92vh;overflow-y:auto;box-shadow:0 30px 70px #0006}.modal-x{position:absolute;top:8px;right:10px;background:none;border:none;font-size:28px;line-height:1;color:var(--mudo);cursor:pointer;padding:6px}.modal-caixa h3{font-size:clamp(23px,4vw,28px);margin-top:4px}.modal-sub{font-size:15.5px;margin-top:10px}.modal-preco{border:1.5px dashed #9FCDB2;background:var(--verde-claro);border-radius:12px;padding:16px;margin:18px 0}.modal-preco s{color:var(--mudo)}.modal-valor{font:600 46px/1 var(--serif);color:var(--cta);margin:4px 0 6px}.modal-preco span{display:block;font-size:13.5px;color:var(--cta);font-weight:700}.modal-caixa .btn{margin-top:0;max-width:none}.modal-nao{display:block;width:100%;margin-top:10px;background:none;border:1px solid var(--linha);border-radius:10px;padding:13px;font:600 14px/1.3 var(--sans);color:var(--mudo);cursor:pointer}</style>
 <script src="https://cashflow.mentoriaprocesso.com/t/p.js?w=8bf6383c-9940-4837-a9d9-6e3cc6dcce06&o=822d33e6-98b2-48f3-9d75-3642755b37ea" data-offer="822d33e6-98b2-48f3-9d75-3642755b37ea" data-nowprocket data-no-minify="1" data-no-optimize="1" data-cfasync="false" async></script>
 </head>
 <body>
-
 <div class="topo">Oferta limitada · Termina hoje <span class="js-data"></span></div>
-
-<!-- 1 · HERO: o produto na lata -->
 <header class="hero">
-  <div class="wrap hero-grade">
-    <div>
-      <span class="selo-topo">O guia definitivo das tranças</span>
-      <h1><span class="forte">50 Modelos de Tranças</span> <span class="resto">com Guia Visual Passo a Passo, do Básico ao Avançado</span></h1>
-      <img class="mock-m" src="../assets/hero-06.webp" srcset="../assets/hero-06-640.webp 640w, ../assets/hero-06.webp 1100w" sizes="(max-width: 899px) calc(100vw - 32px), 1px" width="1100" height="1100" alt="The Braid Map: o livro, a ficha no tablet e o mapa de divisão no celular" fetchpriority="high">
-      <p class="sub">Cada modelo vem com o mapa de divisão, os números exatos e o passo a passo visual.</p>
-      <ul class="lista"><li><span>Knotless, box braids, boho, goddess, stitch, fulani e mais</span></li><li><span>Fileiras, tranças por fileira e pacotes de cada modelo</span></li><li><span>Na sua filha, em você mesma ou nas suas clientes</span></li></ul>
-      <a class="btn" href="#oferta">Quero os 50 modelos</a>
-    </div>
-    <img class="mock-d" src="../assets/hero-06.webp" srcset="../assets/hero-06-640.webp 640w, ../assets/hero-06.webp 1100w" sizes="(min-width: 900px) 460px, 1px" width="1100" height="1100" alt="The Braid Map: o livro, a ficha no tablet e o mapa de divisão no celular" fetchpriority="high">
-  </div>
-</header>
-
-<!-- 2 · POR DENTRO: carrossel das páginas + 6 bullets -->
-<section class="branco">
-  <div class="wrap">
-    <div class="col centro">
-      <h2>Dê uma olhada <em>por dentro das páginas</em></h2>
-      <p class="lead">Todo modelo segue o mesmo formato: o visual, o mapa de divisão e os passos. Imprima ou abra no celular.</p>
-    </div>
-    <div class="carrossel" data-auto="3800">
-      <button class="seta ant" type="button" aria-label="‹">‹</button>
-      <div class="trilho"><figure class="slide"><img src="../assets/r4v2-p1.webp" width="620" height="876" alt="Modelo 1: ficha" decoding="async"></figure><figure class="slide"><img src="../assets/r4v2-p2.webp" width="620" height="876" alt="Modelo 1: mapa de divisão" decoding="async"></figure><figure class="slide"><img src="../assets/r4v2-p3.webp" width="620" height="876" alt="Modelo 1: passo a passo" decoding="async"></figure></div>
-      <button class="seta prox" type="button" aria-label="›">›</button>
-      <div class="pontos"></div>
-    </div>
-    <ul class="checks col"><li><span>Organizado por nível</span></li><li><span>Um mapa de divisão em cada modelo</span></li><li><span>Passo a passo ilustrado</span></li><li><span>Tabela de pacotes por tamanho</span></li><li><span>Imprima ou use no celular</span></li><li><span>Acesso imediato e vitalício</span></li></ul>
-  </div>
-</section>
-
-<!-- 3 · DORES: só identificação (sem resposta) + antes e depois no fim -->
-<section class="areia">
-  <div class="wrap">
-    <div class="col centro">
-      <span class="kicker">Seja qual for o seu jeito de trançar</span>
-      <h2>Encontre o seu motivo. O mapa serve para os três.</h2>
-      <p class="lead">Os modelos são os mesmos. O que muda é de quem é a cabeça na sua frente.</p>
-    </div>
-    <div class="perfis"><div class="perfil"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17.5" cy="10" r="2"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M14.5 21v-2a3 3 0 0 1 6 0v2"/></svg></span><span class="tag-p">A sua filha</span><h3>Você trança o cabelo dela</h3><p>As aulas vão começar, toda trancista está lotada, e as que não estão querem US$ 200 por um penteado de criança.</p></div><div class="perfil"><span class="ico"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="10" rx="6" ry="8"/><path d="M12 18v3M8 21h8"/></svg></span><span class="tag-p">Você mesma</span><h3>Você trança o próprio cabelo</h3><p>Você se recusa a pagar US$ 300 num penteado, mas não enxerga a nuca e o braço cansa na quarta fileira.</p></div><div class="perfil"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.2a3 3 0 0 0-3-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2a3 3 0 0 1-3-1.5M12 6v1.6M12 16.4V18"/></svg></span><span class="tag-p">As suas clientes</span><h3>Você trança para ter renda extra</h3><p>A cliente te mostra a foto de um modelo que você nunca fez. Quantas fileiras? Quantos pacotes? Quanto cobrar?</p></div></div>
-    <p class="comuns-tit">E as duas coisas que derrubam todo mundo:</p>
-    <div class="comuns"><div class="comum"><span class="x">✕</span><div><h3>A divisão</h3><p>Trançar é a parte fácil. O problema são as divisões tortas e as tranças de três tamanhos diferentes.</p></div></div><div class="comum"><span class="x">✕</span><div><h3>“É só colocar o cabelo”</h3><p>Onde? Quanto? O vídeo acelera bem nessa hora, e sai um calombo na raiz.</p></div></div></div>
-    <h3 class="ad-tit">O mesmo cabelo. Agora com um mapa.</h3>
-    <figure class="ad"><img src="../assets/antes-depois-pt.webp" width="1600" height="1000" alt="A mesma mulher vista de cima e de trás: cabelo solto e bagunçado antes, knotless caprichadas depois" decoding="async"></figure>
-  </div>
-</section>
-
-<!-- 4 · BENEFÍCIOS (perfect for…) -->
-<section class="escuro">
-  <div class="wrap">
-    <div class="col centro">
-      <span class="kicker">Perfeito para…</span>
-      <h2>Os momentos em que um mapa salva o dia</h2>
-    </div>
-    <div class="beneficios"><div class="ben"><span class="n">01</span><div><h3>Folga do dia de lavar o cabelo</h3><p>Trança uma vez e, por semanas, é só acordar e sair.</p></div></div><div class="ben"><span class="n">02</span><div><h3>Volta às aulas</h3><p>Tranças caprichadas para o primeiro dia e o dia da foto.</p></div></div><div class="ben"><span class="n">03</span><div><h3>Quando a trancista desmarca</h3><p>O seu plano B já está no papel.</p></div></div><div class="ben"><span class="n">04</span><div><h3>Férias e cruzeiros</h3><p>Modelos que aguentam piscina e mar.</p></div></div><div class="ben"><span class="n">05</span><div><h3>Criança de couro cabeludo sensível</h3><p>Sessões curtas, no ritmo dela, com delicadeza na raiz.</p></div></div><div class="ben"><span class="n">06</span><div><h3>Dizer “sim” a uma cliente</h3><p>Abra o mapa, confira os pacotes e o tempo, e passe o orçamento.</p></div></div></div>
-  </div>
-</section>
-
-<!-- 6 · O QUE VOCÊ VAI RECEBER: mockup + lista + carrossel dos materiais -->
-<section class="areia">
-  <div class="wrap">
-    <div class="col centro">
-      <span class="kicker">O que você recebe</span>
-      <h2>Tudo o que vem dentro do The Braid Map</h2>
-      <p class="lead">Um guia completo, não uma tabela solta.</p>
-    </div>
-    <img class="tres-pag" src="../assets/r4v2-tres.webp" width="1708" height="815" alt="As 3 páginas de um modelo: ficha, mapa de divisão e passo a passo" decoding="async">
-    <ul class="itens-r"><li><span class="n">1</span><div><h3>Parte 1 · Preparação</h3><p>O básico que todo tutorial pula: material, tamanhos, tabela de pacotes, divisão, feed-in, pegada, pontas, trançar criança, manutenção e como desfazer.</p></div></li><li><span class="n">50</span><div><h3>Parte 2 · 50 modelos por nível</h3><p>De knotless e box braids a nagô, stitch e fulani. Nível 1 para a primeira tentativa, Nível 3 para os de parar a rua.</p></div></li><li><span class="n">3</span><div><h3>Um modelo, três páginas</h3><p>Uma ficha (o visual e os números), um mapa de divisão (fileiras, tranças por fileira, tamanho da divisão) e um passo a passo visual.</p></div></li><li><span class="n">✓</span><div><h3>Tabela de consulta rápida</h3><p>Todos os modelos com nível e tempo, para você escolher pelo tempo que tem.</p></div></li></ul>
-    <a class="btn" href="#oferta">Quero os 50 modelos</a>
-  </div>
-</section>
-
-<!-- 7 · BÔNUS (os 5 do Heitor) -->
-<section class="branco">
-  <div class="wrap">
-    <div class="col centro">
-      <span class="kicker">Inclusos no Plano Completo</span>
-      <h2>6 bônus, um para cada motivo de trançar</h2>
-      <p class="lead">Grátis para quem escolhe o Plano Completo.</p>
-    </div>
-    <div class="bonus-grade">
-      <div class="bon"><img class="capa-b" src="../assets/bonus-1.webp" width="420" height="594" alt="Do It On Yourself (Faça em você mesma)" decoding="async"><div><span class="rot">Bônus 1</span><span class="para">Em você mesma</span><h3>Do It On Yourself (Faça em você mesma)</h3><p>Os mesmos mapas na sua própria cabeça: a montagem dos espelhos, as seções que você não enxerga e uma ordem que poupa o braço.</p>
-        <p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
-      <div class="bon"><img class="capa-b" src="../assets/bonus-2.webp" width="420" height="594" alt="20 Back-to-School Kids’ Styles (20 modelos infantis de volta às aulas)" decoding="async"><div><span class="rot">Bônus 2</span><span class="para">Na criança</span><h3>20 Back-to-School Kids’ Styles (20 modelos infantis de volta às aulas)</h3><p>20 modelos infantis para o primeiro dia de aula e o dia da foto, passo a passo.</p>
-        <p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
-      <div class="bon"><img class="capa-b" src="../assets/bonus-3.webp" width="420" height="594" alt="The 20 Best-Selling Styles (Os 20 modelos que mais vendem)" decoding="async"><div><span class="rot">Bônus 3</span><span class="para">Para renda</span><h3>The 20 Best-Selling Styles (Os 20 modelos que mais vendem)</h3><p>Os 20 modelos que as clientes mais pedem, para você saber o que oferecer primeiro.</p>
-        <p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
-      <div class="bon"><img class="capa-b" src="../assets/bonus-4.webp" width="420" height="594" alt="How to Wash Your Braids (Como lavar o cabelo trançado)" decoding="async"><div><span class="rot">Bônus 4</span><span class="para">Manutenção</span><h3>How to Wash Your Braids (Como lavar o cabelo trançado)</h3><p>Lave e renove as tranças sem arrepiar e sem precisar desmanchar.</p>
-        <p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
-      <div class="bon"><img class="capa-b" src="../assets/bonus-5.webp" width="420" height="594" alt="How to Price Your Braids (Como precificar suas tranças)" decoding="async"><div><span class="rot">Bônus 5</span><span class="para">Para renda</span><h3>How to Price Your Braids (Como precificar suas tranças)</h3><p>Defina o preço por modelo, tempo e cabelo, e pare de cobrar barato.</p>
-        <p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
-      <div class="bon"><img class="capa-b" src="../assets/bonus-6.webp" width="420" height="594" alt="Vacation & Swim Braids (Tranças para viagem e piscina)" decoding="async"><div><span class="rot">Bônus 6</span><span class="para">Viagem</span><h3>Vacation & Swim Braids (Tranças para viagem e piscina)</h3><p>Modelos que aguentam piscina, mar e duas semanas sem mexer, e os cuidados com cloro e sal.</p>
-        <p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- 8 · OFERTA: Essencial (abre o popup) x Completo (destaque) -->
-<section class="areia" id="oferta">
-  <div class="wrap">
-    <div class="col centro">
-      <span class="kicker">Escolha o seu plano</span>
-      <h2>Leve o mapa hoje</h2>
-      <p class="lead">Pagamento único. Acesso imediato por e-mail. Sem mensalidade.</p>
-    </div>
-    <div class="planos-grade">
-      <div class="plano essencial">
-        
-        <h3>Essencial</h3>
-        <p class="p-desc">O guia</p>
-        <ul><li><span>O guia com 50 modelos (PDF)</span></li><li><span>Acesso vitalício</span></li></ul>
-        <div class="preco">US$ 9,90</div>
-        <p class="preco-nota">pagamento único · acesso imediato</p>
-        <!-- CHECKOUT Plano Essencial (US$ 9,90): config.checkout.essencial. Abre o popup de upgrade antes. -->
-        <a class="btn" id="btn-essencial" data-checkout data-valor="9.9" href="https://pay.hotmart.com/D108621033Q?off=zgkc322g&checkoutMode=10">Só o guia</a>
-      </div>
-      <div class="plano completo">
-        <span class="selo">Melhor custo-benefício · mais completo</span>
-        <img class="plano-img" src="../assets/pacote.webp" width="1597" height="812" alt="O guia The Braid Map no centro com os 6 bônus em volta" decoding="async">
-        <h3>Completo</h3>
-        <p class="p-desc">O guia + 6 bônus</p>
-        <ul><li><span>Tudo do Plano Essencial</span></li>
-          <li class="b"><span><b>Bônus 1:</b> Do It On Yourself (Faça em você mesma)</span></li><li class="b"><span><b>Bônus 2:</b> 20 Back-to-School Kids’ Styles (20 modelos infantis de volta às aulas)</span></li><li class="b"><span><b>Bônus 3:</b> The 20 Best-Selling Styles (Os 20 modelos que mais vendem)</span></li><li class="b"><span><b>Bônus 4:</b> How to Wash Your Braids (Como lavar o cabelo trançado)</span></li><li class="b"><span><b>Bônus 5:</b> How to Price Your Braids (Como precificar suas tranças)</span></li><li class="b"><span><b>Bônus 6:</b> Vacation & Swim Braids (Tranças para viagem e piscina)</span></li></ul>
-        <p class="de">Valor: <s>US$ 81</s></p>
-        <div class="preco">US$ 19,90</div>
-        <p class="preco-nota">pagamento único · acesso imediato</p>
-        <span class="eco">Você economiza US$ 61,10</span>
-        <!-- CHECKOUT Plano Completo (US$ 19,90): config.checkout.completo -->
-        <a class="btn" data-checkout data-valor="19.9" href="https://pay.hotmart.com/D108621033Q?off=6o42yd3w&checkoutMode=10">Sim, quero o Plano Completo</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 9 · GARANTIA (curta) -->
-<section class="branco">
-  <div class="wrap garantia">
-    <div class="selo-g"><b>7</b><span>dias de<br>garantia</span></div>
-    <div><h2>Garantia de 7 dias</h2><p>Experimente o guia. Se não for para você, mande um e-mail em até 7 dias e devolvemos 100% do valor.</p></div>
-  </div>
-</section>
-
-<!-- 10 · FAQ (perguntas reais do estudo, seção 4) -->
-<section class="areia">
-  <div class="wrap col">
-    <div class="centro">
-      <span class="kicker">Dúvidas</span>
-      <h2>Perguntas frequentes</h2>
-    </div>
-    <div class="faq"><details><summary>Quantos pacotes de cabelo eu preciso?</summary><div class="resp">Depende do tamanho e do comprimento. A Parte 1 tem uma tabela de pacotes por tamanho e comprimento, para criança e adulta, e cada ficha diz quantos pacotes aquele modelo pede. Chega de comprar 3 e faltar no meio.</div></details><details><summary>Qual a diferença entre small, smedium, medium, large e jumbo?</summary><div class="resp">O guia de tamanhos define cada um com números: tamanho da divisão, número médio de tranças e tempo. Cada mapa também mostra o tamanho da divisão fileira por fileira, em polegadas e cm, e o “médio” deixa de ser chute.</div></details><details><summary>Quanto cabelo eu coloco, e quando?</summary><div class="resp">O capítulo de feed-in mostra onde entra a primeira mecha, quanto usar e quando pôr a segunda e a terceira, para a raiz ficar lisa. O mapa de cada modelo tem a sua própria tabela de feed-in.</div></details><details><summary>Cruzo por cima ou por baixo? Sou canhota.</summary><div class="resp">O capítulo da pegada explica os dois jeitos e como escolher um e não trocar no meio, que é o que deixa as tranças por igual. Quem é canhota segue os mesmos passos pelo outro lado.</div></details><details><summary>Como eu faço a nuca na minha própria cabeça?</summary><div class="resp">O mapa diz onde vai cada seção antes de você começar, então você trabalha pela contagem, não pelo olho. O bônus Do It On Yourself (Plano Completo) traz a montagem dos espelhos e uma ordem que poupa o braço.</div></details><details><summary>Quanto tempo eu vou levar?</summary><div class="resp">Cada ficha traz um tempo estimado. Os modelos do Nível 1 têm divisões maiores e menos tranças, então são os mais rápidos. Com criança, o guia mostra como dividir o penteado em sessões mais curtas.</div></details><details><summary>Eu nunca trancei. É para mim?</summary><div class="resp">Sim. Comece pela Parte 1 e pelos modelos do Nível 1: divisões grandes, menos tranças e todos os números explicados. Suba para o Nível 2 e o 3 quando estiver pronta.</div></details><details><summary>Dá para fazer em cabelo curto ou muito cacheado? Tenho que alisar antes?</summary><div class="resp">A parte de Preparação explica como lavar, secar e esticar o cabelo antes de trançar, e cada ficha diz em que comprimento o modelo funciona melhor.</div></details><details><summary>Que gel, mousse ou edge control eu uso?</summary><div class="resp">O capítulo de material lista tudo o que você precisa e para que serve cada produto. Não exige marca: compre o que você já confia.</div></details><details><summary>Vai doer? Vai estragar o baby hair (edges)?</summary><div class="resp">Trança puxada demais na raiz força a linha do cabelo. O guia mostra como deixar a raiz firme sem puxar e quais tamanhos são mais leves. Ele não faz nenhuma promessa sobre saúde ou crescimento do cabelo. Se algo doer, pare e afrouxe.</div></details><details><summary>É um curso em vídeo? Como eu recebo?</summary><div class="resp">É um guia em PDF para imprimir, com mapas, tabelas e passos ilustrados. Logo depois do pagamento você recebe um e-mail com o acesso. Dá para ler no celular, no tablet ou no computador, ou imprimir.</div></details><details><summary>É assinatura?</summary><div class="resp">Não. É pagamento único, com acesso vitalício.</div></details><details><summary>E se eu não gostar?</summary><div class="resp">Você tem 7 dias de garantia. É só mandar um e-mail e devolvemos 100% do valor.</div></details></div>
-    <a class="btn" href="#oferta">Quero os 50 modelos</a>
-  </div>
-</section>
-
-<footer class="rodape">
-  <p>© 2026 The Braid Map. Todos os direitos reservados.</p>
-  <p><a href="#">Termos de uso</a> · <a href="#">Política de privacidade</a></p>
-  <p>Este guia ensina técnicas de penteado. Não é orientação médica e não faz nenhuma promessa sobre crescimento do cabelo ou saúde do couro cabeludo. O resultado depende de prática.</p>
-  <p>Este site não faz parte do Facebook nem da Facebook Inc. e não é endossado pelo Facebook de forma alguma.</p>
-</footer>
-
-<!-- POPUP DE UPGRADE: quem clica no Essencial vê o Completo a US$ 14,90 (config.checkout.popup) -->
-<div class="modal" id="upsell" hidden role="dialog" aria-modal="true" aria-labelledby="upsell-titulo">
-  <div class="modal-fundo" data-fechar></div>
-  <div class="modal-caixa">
-    <button class="modal-x" type="button" data-fechar aria-label="Fechar">×</button>
-    <span class="kicker">Espera, oferta única</span>
-    <h3 id="upsell-titulo">Leve os 6 bônus por só US$ 5 a mais</h3>
-    <p class="modal-sub">Passe para o Plano Completo: o guia inteiro mais os 6 bônus (Faça em você mesma, 20 modelos infantis de volta às aulas, Os 20 modelos que mais vendem, Como lavar o cabelo trançado, Como precificar suas tranças e Tranças para viagem e piscina).</p>
-    <div class="modal-preco"><s>US$ 19,90</s><div class="modal-valor">US$ 14,90</div><span>só US$ 5 a mais que o Essencial</span></div>
-    <a class="btn" id="upsell-sim" data-checkout data-valor="14.9" href="TROCAR-CHECKOUT-POPUP">Sim, quero passar para o Completo</a>
-    <button class="modal-nao" id="upsell-nao" type="button">Não, obrigada, só o guia</button>
-  </div>
+<div class="wrap hero-grade">
+<div>
+<span class="selo-topo">O guia definitivo das tranças</span>
+<h1><span class="forte">50 Modelos de Tranças</span> <span class="resto">com Guia Visual Passo a Passo, do Básico ao Avançado</span></h1>
+<img class="mock-m" src="../assets/hero-06.webp" srcset="../assets/hero-06-640.webp 640w, ../assets/hero-06-800.webp 800w, ../assets/hero-06.webp 1100w" sizes="(max-width: 899px) calc(100vw - 32px), 1px" width="1100" height="1100" alt="The Braid Map: o livro, a ficha no tablet e o mapa de divisão no celular" fetchpriority="high">
+<p class="sub">Cada modelo vem com o mapa de divisão, os números exatos e o passo a passo visual.</p>
+<ul class="lista"><li><span>Knotless, box braids, boho, goddess, stitch, fulani e mais</span></li><li><span>Fileiras, tranças por fileira e pacotes de cada modelo</span></li><li><span>Na sua filha, em você mesma ou nas suas clientes</span></li></ul>
+<a class="btn" href="#oferta">Quero os 50 modelos</a>
 </div>
-
-<script>
-(function () {
-  try { var d = new Date().toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' }); document.querySelectorAll('.js-data').forEach(function (el) { el.textContent = d; }); } catch (e) {}
-  var AVISO = 'Versão em português, só para revisão: os botões não vão ao checkout.';
-  var q = location.search.replace(/^\?/, '');
-  function eTrocar(a) { return (a.getAttribute('href') || '').indexOf('TROCAR') !== -1; }
-  function marca(a) {
-    window.__indoParaCheckout = true;
-    try { fbq('track', 'InitiateCheckout', { value: Number(a.getAttribute('data-valor')) || 0, currency: 'USD' }); } catch (e) {}
-  }
-
-  // carrosséis INFINITOS: o conjunto de slides é clonado antes e depois ([clones][originais][clones]).
-  // Sempre segue para a direita; quando passa do conjunto do meio, reposiciona sem animação (a emenda não aparece).
-  // Setas, pontos, arrastar nos dois sentidos, e pausa no toque e no mouse.
-  document.querySelectorAll('.carrossel').forEach(function (c) {
-    var t = c.querySelector('.trilho'), pts = c.querySelector('.pontos');
-    var orig = [].slice.call(t.children), n = orig.length;
-    if (!n) return;
-    for (var i = 0; i < n; i++) pts.appendChild(document.createElement('i'));
-    if (n > 1) {
-      var antes = document.createDocumentFragment(), depois = document.createDocumentFragment();
-      orig.forEach(function (sl) {
-        var a = sl.cloneNode(true), d = sl.cloneNode(true);
-        a.setAttribute('aria-hidden', 'true'); d.setAttribute('aria-hidden', 'true');
-        antes.appendChild(a); depois.appendChild(d);
-      });
-      t.insertBefore(antes, t.firstChild); t.appendChild(depois);
-    }
-    function passo() { return orig[0].getBoundingClientRect().width + 16; }
-    function conj() { return passo() * n; }
-    function pula(x) { t.style.scrollBehavior = 'auto'; t.style.scrollSnapType = 'none'; t.scrollLeft = x; t.offsetWidth; t.style.scrollSnapType = ''; t.style.scrollBehavior = ''; }
-    function ajusta() {
-      if (n < 2) return;
-      var w = conj();
-      if (t.scrollLeft >= w * 2 - 2) pula(t.scrollLeft - w);
-      else if (t.scrollLeft < w * 0.5) pula(t.scrollLeft + w);
-    }
-    function marcar() {
-      var k = ((Math.round(t.scrollLeft / passo()) % n) + n) % n;
-      [].forEach.call(pts.children, function (p, j) { p.className = j === k ? 'on' : ''; });
-    }
-    if (n > 1) pula(conj());
-    marcar();
-    var fimRolagem = null;
-    t.addEventListener('scroll', function () {
-      window.requestAnimationFrame(marcar);
-      clearTimeout(fimRolagem); fimRolagem = setTimeout(ajusta, 140);
-    });
-    window.addEventListener('resize', function () { if (n > 1) pula(conj() + (((Math.round(t.scrollLeft / passo()) % n) + n) % n) * passo()); });
-    c.querySelector('.ant').addEventListener('click', function () { ajusta(); t.scrollBy({ left: -passo(), behavior: 'smooth' }); });
-    c.querySelector('.prox').addEventListener('click', function () { ajusta(); t.scrollBy({ left: passo(), behavior: 'smooth' }); });
-    // passa sozinho, sempre para a direita; para no toque ou no mouse e volta 4 s depois
-    var ms = Number(c.getAttribute('data-auto')) || 0, parado = false, volta = null;
-    if (ms && n > 1) {
-      var pausa = function () { parado = true; clearTimeout(volta); };
-      var segue = function () { clearTimeout(volta); volta = setTimeout(function () { parado = false; }, 4000); };
-      ['mouseenter', 'touchstart', 'pointerdown', 'focusin'].forEach(function (ev) { c.addEventListener(ev, pausa, { passive: true }); });
-      ['mouseleave', 'touchend', 'pointerup', 'focusout'].forEach(function (ev) { c.addEventListener(ev, segue, { passive: true }); });
-      setInterval(function () {
-        if (parado || document.hidden) return;
-        ajusta();
-        t.scrollBy({ left: passo(), behavior: 'smooth' });
-      }, ms);
-    }
-  });
-
-  // checkout: leva as UTMs; enquanto o link for TROCAR, avisa em vez de sair
-  document.querySelectorAll('a[data-checkout]').forEach(function (a) {
-    var h = a.getAttribute('href') || '';
-    if (q && /^https?:/.test(h)) a.href = h + (h.indexOf('?') >= 0 ? '&' : '?') + q;
-    if (a.id === 'btn-essencial') return;
-    a.addEventListener('click', function (e) {
-      if (eTrocar(a)) { e.preventDefault(); alert(AVISO); return; }
-      marca(a);
-    });
-  });
-
-  // âncoras (#oferta): rolagem suave
-  document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      var alvo = document.getElementById(a.getAttribute('href').slice(1));
-      if (!alvo) return;
-      e.preventDefault();
-      alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  // popup de upgrade
-  var modal = document.getElementById('upsell'), essencial = document.getElementById('btn-essencial'), nao = document.getElementById('upsell-nao');
-  var ultimoFoco = null;
-  function fechar() { modal.hidden = true; document.body.style.overflow = ''; if (ultimoFoco) ultimoFoco.focus(); }
-  essencial.addEventListener('click', function (e) {
-    // sem link do popup (TROCAR), o Essencial vai direto ao checkout dele
-    if (eTrocar(document.getElementById('upsell-sim'))) { if (eTrocar(essencial)) { e.preventDefault(); alert(AVISO); return; } marca(essencial); return; }
-    e.preventDefault();
-    ultimoFoco = document.activeElement;
-    modal.hidden = false; document.body.style.overflow = 'hidden';
-    document.getElementById('upsell-sim').focus();
-  });
-  modal.querySelectorAll('[data-fechar]').forEach(function (b) { b.addEventListener('click', fechar); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hidden) fechar(); });
-  nao.addEventListener('click', function () {
-    if (eTrocar(essencial)) { alert(AVISO); return; }
-    marca(essencial);
-    location.href = essencial.href;
-  });
-})();
-</script>
-
-
+<img class="mock-d" src="../assets/hero-06.webp" srcset="../assets/hero-06-640.webp 640w, ../assets/hero-06-800.webp 800w, ../assets/hero-06.webp 1100w" sizes="(min-width: 900px) 460px, 1px" width="1100" height="1100" alt="The Braid Map: o livro, a ficha no tablet e o mapa de divisão no celular" fetchpriority="high">
+</div>
+</header>
+<section class="branco">
+<div class="wrap">
+<div class="col centro">
+<h2>Dê uma olhada <em>por dentro das páginas</em></h2>
+<p class="lead">Todo modelo segue o mesmo formato: o visual, o mapa de divisão e os passos. Imprima ou abra no celular.</p>
+</div>
+<div class="carrossel" data-auto="3800">
+<button class="seta ant" type="button" aria-label="‹">‹</button>
+<div class="trilho"><figure class="slide"><img loading="lazy" src="../assets/r4v2-p1.webp" width="620" height="876" alt="Modelo 1: ficha" decoding="async"></figure><figure class="slide"><img loading="lazy" src="../assets/r4v2-p2.webp" width="620" height="876" alt="Modelo 1: mapa de divisão" decoding="async"></figure><figure class="slide"><img loading="lazy" src="../assets/r4v2-p3.webp" width="620" height="876" alt="Modelo 1: passo a passo" decoding="async"></figure></div>
+<button class="seta prox" type="button" aria-label="›">›</button>
+<div class="pontos"></div>
+</div>
+<ul class="checks col"><li><span>Organizado por nível</span></li><li><span>Um mapa de divisão em cada modelo</span></li><li><span>Passo a passo ilustrado</span></li><li><span>Tabela de pacotes por tamanho</span></li><li><span>Imprima ou use no celular</span></li><li><span>Acesso imediato e vitalício</span></li></ul>
+</div>
+</section>
+<section class="areia">
+<div class="wrap">
+<div class="col centro">
+<span class="kicker">Seja qual for o seu jeito de trançar</span>
+<h2>Encontre o seu motivo. O mapa serve para os três.</h2>
+<p class="lead">Os modelos são os mesmos. O que muda é de quem é a cabeça na sua frente.</p>
+</div>
+<div class="perfis"><div class="perfil"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="3"/><circle cx="17.5" cy="10" r="2"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M14.5 21v-2a3 3 0 0 1 6 0v2"/></svg></span><span class="tag-p">A sua filha</span><h3>Você trança o cabelo dela</h3><p>As aulas vão começar, toda trancista está lotada, e as que não estão querem US$ 200 por um penteado de criança.</p></div><div class="perfil"><span class="ico"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="10" rx="6" ry="8"/><path d="M12 18v3M8 21h8"/></svg></span><span class="tag-p">Você mesma</span><h3>Você trança o próprio cabelo</h3><p>Você se recusa a pagar US$ 300 num penteado, mas não enxerga a nuca e o braço cansa na quarta fileira.</p></div><div class="perfil"><span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15 9.2a3 3 0 0 0-3-1.5c-1.7 0-3 .9-3 2.2 0 3 6 1.6 6 4.6 0 1.3-1.3 2.2-3 2.2a3 3 0 0 1-3-1.5M12 6v1.6M12 16.4V18"/></svg></span><span class="tag-p">As suas clientes</span><h3>Você trança para ter renda extra</h3><p>A cliente te mostra a foto de um modelo que você nunca fez. Quantas fileiras? Quantos pacotes? Quanto cobrar?</p></div></div>
+<p class="comuns-tit">E as duas coisas que derrubam todo mundo:</p>
+<div class="comuns"><div class="comum"><span class="x">✕</span><div><h3>A divisão</h3><p>Trançar é a parte fácil. O problema são as divisões tortas e as tranças de três tamanhos diferentes.</p></div></div><div class="comum"><span class="x">✕</span><div><h3>“É só colocar o cabelo”</h3><p>Onde? Quanto? O vídeo acelera bem nessa hora, e sai um calombo na raiz.</p></div></div></div>
+<h3 class="ad-tit">O mesmo cabelo. Agora com um mapa.</h3>
+<figure class="ad"><img loading="lazy" src="../assets/antes-depois-pt.webp" width="1600" height="1000" alt="A mesma mulher vista de cima e de trás: cabelo solto e bagunçado antes, knotless caprichadas depois" decoding="async"></figure>
+</div>
+</section>
+<section class="escuro">
+<div class="wrap">
+<div class="col centro">
+<span class="kicker">Perfeito para…</span>
+<h2>Os momentos em que um mapa salva o dia</h2>
+</div>
+<div class="beneficios"><div class="ben"><span class="n">01</span><div><h3>Folga do dia de lavar o cabelo</h3><p>Trança uma vez e, por semanas, é só acordar e sair.</p></div></div><div class="ben"><span class="n">02</span><div><h3>Volta às aulas</h3><p>Tranças caprichadas para o primeiro dia e o dia da foto.</p></div></div><div class="ben"><span class="n">03</span><div><h3>Quando a trancista desmarca</h3><p>O seu plano B já está no papel.</p></div></div><div class="ben"><span class="n">04</span><div><h3>Férias e cruzeiros</h3><p>Modelos que aguentam piscina e mar.</p></div></div><div class="ben"><span class="n">05</span><div><h3>Criança de couro cabeludo sensível</h3><p>Sessões curtas, no ritmo dela, com delicadeza na raiz.</p></div></div><div class="ben"><span class="n">06</span><div><h3>Dizer “sim” a uma cliente</h3><p>Abra o mapa, confira os pacotes e o tempo, e passe o orçamento.</p></div></div></div>
+</div>
+</section>
+<section class="areia">
+<div class="wrap">
+<div class="col centro">
+<span class="kicker">O que você recebe</span>
+<h2>Tudo o que vem dentro do The Braid Map</h2>
+<p class="lead">Um guia completo, não uma tabela solta.</p>
+</div>
+<img loading="lazy" class="tres-pag" src="../assets/r4v2-tres.webp" width="1708" height="815" alt="As 3 páginas de um modelo: ficha, mapa de divisão e passo a passo" decoding="async">
+<ul class="itens-r"><li><span class="n">1</span><div><h3>Parte 1 · Preparação</h3><p>O básico que todo tutorial pula: material, tamanhos, tabela de pacotes, divisão, feed-in, pegada, pontas, trançar criança, manutenção e como desfazer.</p></div></li><li><span class="n">50</span><div><h3>Parte 2 · 50 modelos por nível</h3><p>De knotless e box braids a nagô, stitch e fulani. Nível 1 para a primeira tentativa, Nível 3 para os de parar a rua.</p></div></li><li><span class="n">3</span><div><h3>Um modelo, três páginas</h3><p>Uma ficha (o visual e os números), um mapa de divisão (fileiras, tranças por fileira, tamanho da divisão) e um passo a passo visual.</p></div></li><li><span class="n">✓</span><div><h3>Tabela de consulta rápida</h3><p>Todos os modelos com nível e tempo, para você escolher pelo tempo que tem.</p></div></li></ul>
+<a class="btn" href="#oferta">Quero os 50 modelos</a>
+</div>
+</section>
+<section class="branco">
+<div class="wrap">
+<div class="col centro">
+<span class="kicker">Inclusos no Plano Completo</span>
+<h2>6 bônus, um para cada motivo de trançar</h2>
+<p class="lead">Grátis para quem escolhe o Plano Completo.</p>
+</div>
+<div class="bonus-grade">
+<div class="bon"><img loading="lazy" class="capa-b" src="../assets/bonus-1.webp" srcset="../assets/bonus-1-200.webp 200w, ../assets/bonus-1.webp 420w" sizes="96px" width="420" height="594" alt="Do It On Yourself (Faça em você mesma)" decoding="async"><div><span class="rot">Bônus 1</span><span class="para">Em você mesma</span><h3>Do It On Yourself (Faça em você mesma)</h3><p>Os mesmos mapas na sua própria cabeça: a montagem dos espelhos, as seções que você não enxerga e uma ordem que poupa o braço.</p>
+<p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
+<div class="bon"><img loading="lazy" class="capa-b" src="../assets/bonus-2.webp" srcset="../assets/bonus-2-200.webp 200w, ../assets/bonus-2.webp 420w" sizes="96px" width="420" height="594" alt="20 Back-to-School Kids’ Styles (20 modelos infantis de volta às aulas)" decoding="async"><div><span class="rot">Bônus 2</span><span class="para">Na criança</span><h3>20 Back-to-School Kids’ Styles (20 modelos infantis de volta às aulas)</h3><p>20 modelos infantis para o primeiro dia de aula e o dia da foto, passo a passo.</p>
+<p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
+<div class="bon"><img loading="lazy" class="capa-b" src="../assets/bonus-3.webp" srcset="../assets/bonus-3-200.webp 200w, ../assets/bonus-3.webp 420w" sizes="96px" width="420" height="594" alt="The 20 Best-Selling Styles (Os 20 modelos que mais vendem)" decoding="async"><div><span class="rot">Bônus 3</span><span class="para">Para renda</span><h3>The 20 Best-Selling Styles (Os 20 modelos que mais vendem)</h3><p>Os 20 modelos que as clientes mais pedem, para você saber o que oferecer primeiro.</p>
+<p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
+<div class="bon"><img loading="lazy" class="capa-b" src="../assets/bonus-4.webp" srcset="../assets/bonus-4-200.webp 200w, ../assets/bonus-4.webp 420w" sizes="96px" width="420" height="594" alt="How to Wash Your Braids (Como lavar o cabelo trançado)" decoding="async"><div><span class="rot">Bônus 4</span><span class="para">Manutenção</span><h3>How to Wash Your Braids (Como lavar o cabelo trançado)</h3><p>Lave e renove as tranças sem arrepiar e sem precisar desmanchar.</p>
+<p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
+<div class="bon"><img loading="lazy" class="capa-b" src="../assets/bonus-5.webp" srcset="../assets/bonus-5-200.webp 200w, ../assets/bonus-5.webp 420w" sizes="96px" width="420" height="594" alt="How to Price Your Braids (Como precificar suas tranças)" decoding="async"><div><span class="rot">Bônus 5</span><span class="para">Para renda</span><h3>How to Price Your Braids (Como precificar suas tranças)</h3><p>Defina o preço por modelo, tempo e cabelo, e pare de cobrar barato.</p>
+<p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
+<div class="bon"><img loading="lazy" class="capa-b" src="../assets/bonus-6.webp" srcset="../assets/bonus-6-200.webp 200w, ../assets/bonus-6.webp 420w" sizes="96px" width="420" height="594" alt="Vacation & Swim Braids (Tranças para viagem e piscina)" decoding="async"><div><span class="rot">Bônus 6</span><span class="para">Viagem</span><h3>Vacation & Swim Braids (Tranças para viagem e piscina)</h3><p>Modelos que aguentam piscina, mar e duas semanas sem mexer, e os cuidados com cloro e sal.</p>
+<p class="val">Valor: <s>US$ 9</s> · <b>grátis</b></p></div></div>
+</div>
+</div>
+</section>
+<section class="areia" id="oferta">
+<div class="wrap">
+<div class="col centro">
+<span class="kicker">Escolha o seu plano</span>
+<h2>Leve o mapa hoje</h2>
+<p class="lead">Pagamento único. Acesso imediato por e-mail. Sem mensalidade.</p>
+</div>
+<div class="planos-grade">
+<div class="plano essencial">
+<h3>Essencial</h3>
+<p class="p-desc">O guia</p>
+<ul><li><span>O guia com 50 modelos (PDF)</span></li><li><span>Acesso vitalício</span></li></ul>
+<div class="preco">US$ 9,90</div>
+<p class="preco-nota">pagamento único · acesso imediato</p>
+<a class="btn" id="btn-essencial" data-checkout data-valor="9.9" href="https://pay.hotmart.com/D108621033Q?off=zgkc322g&checkoutMode=10">Só o guia</a>
+</div>
+<div class="plano completo">
+<span class="selo">Melhor custo-benefício · mais completo</span>
+<img loading="lazy" class="plano-img" src="../assets/pacote.webp" srcset="../assets/pacote-800.webp 800w, ../assets/pacote.webp 1597w" sizes="(max-width: 899px) calc(100vw - 58px), 460px" width="1597" height="812" alt="O guia The Braid Map no centro com os 6 bônus em volta" decoding="async">
+<h3>Completo</h3>
+<p class="p-desc">O guia + 6 bônus</p>
+<ul><li><span>Tudo do Plano Essencial</span></li>
+<li class="b"><span><b>Bônus 1:</b> Do It On Yourself (Faça em você mesma)</span></li><li class="b"><span><b>Bônus 2:</b> 20 Back-to-School Kids’ Styles (20 modelos infantis de volta às aulas)</span></li><li class="b"><span><b>Bônus 3:</b> The 20 Best-Selling Styles (Os 20 modelos que mais vendem)</span></li><li class="b"><span><b>Bônus 4:</b> How to Wash Your Braids (Como lavar o cabelo trançado)</span></li><li class="b"><span><b>Bônus 5:</b> How to Price Your Braids (Como precificar suas tranças)</span></li><li class="b"><span><b>Bônus 6:</b> Vacation & Swim Braids (Tranças para viagem e piscina)</span></li></ul>
+<p class="de">Valor: <s>US$ 81</s></p>
+<div class="preco">US$ 19,90</div>
+<p class="preco-nota">pagamento único · acesso imediato</p>
+<span class="eco">Você economiza US$ 61,10</span>
+<a class="btn" data-checkout data-valor="19.9" href="https://pay.hotmart.com/D108621033Q?off=6o42yd3w&checkoutMode=10">Sim, quero o Plano Completo</a>
+</div>
+</div>
+</div>
+</section>
+<section class="branco">
+<div class="wrap garantia">
+<div class="selo-g"><b>7</b><span>dias de<br>garantia</span></div>
+<div><h2>Garantia de 7 dias</h2><p>Experimente o guia. Se não for para você, mande um e-mail em até 7 dias e devolvemos 100% do valor.</p></div>
+</div>
+</section>
+<section class="areia">
+<div class="wrap col">
+<div class="centro">
+<span class="kicker">Dúvidas</span>
+<h2>Perguntas frequentes</h2>
+</div>
+<div class="faq"><details><summary>Quantos pacotes de cabelo eu preciso?</summary><div class="resp">Depende do tamanho e do comprimento. A Parte 1 tem uma tabela de pacotes por tamanho e comprimento, para criança e adulta, e cada ficha diz quantos pacotes aquele modelo pede. Chega de comprar 3 e faltar no meio.</div></details><details><summary>Qual a diferença entre small, smedium, medium, large e jumbo?</summary><div class="resp">O guia de tamanhos define cada um com números: tamanho da divisão, número médio de tranças e tempo. Cada mapa também mostra o tamanho da divisão fileira por fileira, em polegadas e cm, e o “médio” deixa de ser chute.</div></details><details><summary>Quanto cabelo eu coloco, e quando?</summary><div class="resp">O capítulo de feed-in mostra onde entra a primeira mecha, quanto usar e quando pôr a segunda e a terceira, para a raiz ficar lisa. O mapa de cada modelo tem a sua própria tabela de feed-in.</div></details><details><summary>Cruzo por cima ou por baixo? Sou canhota.</summary><div class="resp">O capítulo da pegada explica os dois jeitos e como escolher um e não trocar no meio, que é o que deixa as tranças por igual. Quem é canhota segue os mesmos passos pelo outro lado.</div></details><details><summary>Como eu faço a nuca na minha própria cabeça?</summary><div class="resp">O mapa diz onde vai cada seção antes de você começar, então você trabalha pela contagem, não pelo olho. O bônus Do It On Yourself (Plano Completo) traz a montagem dos espelhos e uma ordem que poupa o braço.</div></details><details><summary>Quanto tempo eu vou levar?</summary><div class="resp">Cada ficha traz um tempo estimado. Os modelos do Nível 1 têm divisões maiores e menos tranças, então são os mais rápidos. Com criança, o guia mostra como dividir o penteado em sessões mais curtas.</div></details><details><summary>Eu nunca trancei. É para mim?</summary><div class="resp">Sim. Comece pela Parte 1 e pelos modelos do Nível 1: divisões grandes, menos tranças e todos os números explicados. Suba para o Nível 2 e o 3 quando estiver pronta.</div></details><details><summary>Dá para fazer em cabelo curto ou muito cacheado? Tenho que alisar antes?</summary><div class="resp">A parte de Preparação explica como lavar, secar e esticar o cabelo antes de trançar, e cada ficha diz em que comprimento o modelo funciona melhor.</div></details><details><summary>Que gel, mousse ou edge control eu uso?</summary><div class="resp">O capítulo de material lista tudo o que você precisa e para que serve cada produto. Não exige marca: compre o que você já confia.</div></details><details><summary>Vai doer? Vai estragar o baby hair (edges)?</summary><div class="resp">Trança puxada demais na raiz força a linha do cabelo. O guia mostra como deixar a raiz firme sem puxar e quais tamanhos são mais leves. Ele não faz nenhuma promessa sobre saúde ou crescimento do cabelo. Se algo doer, pare e afrouxe.</div></details><details><summary>É um curso em vídeo? Como eu recebo?</summary><div class="resp">É um guia em PDF para imprimir, com mapas, tabelas e passos ilustrados. Logo depois do pagamento você recebe um e-mail com o acesso. Dá para ler no celular, no tablet ou no computador, ou imprimir.</div></details><details><summary>É assinatura?</summary><div class="resp">Não. É pagamento único, com acesso vitalício.</div></details><details><summary>E se eu não gostar?</summary><div class="resp">Você tem 7 dias de garantia. É só mandar um e-mail e devolvemos 100% do valor.</div></details></div>
+<a class="btn" href="#oferta">Quero os 50 modelos</a>
+</div>
+</section>
+<footer class="rodape">
+<p>© 2026 The Braid Map. Todos os direitos reservados.</p>
+<p><a href="#">Termos de uso</a> · <a href="#">Política de privacidade</a></p>
+<p>Este guia ensina técnicas de penteado. Não é orientação médica e não faz nenhuma promessa sobre crescimento do cabelo ou saúde do couro cabeludo. O resultado depende de prática.</p>
+<p>Este site não faz parte do Facebook nem da Facebook Inc. e não é endossado pelo Facebook de forma alguma.</p>
+</footer>
+<div class="modal" id="upsell" hidden role="dialog" aria-modal="true" aria-labelledby="upsell-titulo">
+<div class="modal-fundo" data-fechar></div>
+<div class="modal-caixa">
+<button class="modal-x" type="button" data-fechar aria-label="Fechar">×</button>
+<span class="kicker">Espera, oferta única</span>
+<h3 id="upsell-titulo">Leve os 6 bônus por só US$ 5 a mais</h3>
+<p class="modal-sub">Passe para o Plano Completo: o guia inteiro mais os 6 bônus (Faça em você mesma, 20 modelos infantis de volta às aulas, Os 20 modelos que mais vendem, Como lavar o cabelo trançado, Como precificar suas tranças e Tranças para viagem e piscina).</p>
+<div class="modal-preco"><s>US$ 19,90</s><div class="modal-valor">US$ 14,90</div><span>só US$ 5 a mais que o Essencial</span></div>
+<a class="btn" id="upsell-sim" data-checkout data-valor="14.9" href="TROCAR-CHECKOUT-POPUP">Sim, quero passar para o Completo</a>
+<button class="modal-nao" id="upsell-nao" type="button">Não, obrigada, só o guia</button>
+</div>
+</div>
+<script>(function(){try{var C=new Date().toLocaleDateString("pt-BR",{day:"2-digit",month:"2-digit",year:"numeric"});document.querySelectorAll(".js-data").forEach(function(e){e.textContent=C})}catch(e){}var h="Vers\xE3o em portugu\xEAs, s\xF3 para revis\xE3o: os bot\xF5es n\xE3o v\xE3o ao checkout.",b=location.search.replace(/^\?/,"");function l(e){return(e.getAttribute("href")||"").indexOf("TROCAR")!==-1}function m(e){window.__indoParaCheckout=!0;try{fbq("track","InitiateCheckout",{value:Number(e.getAttribute("data-valor"))||0,currency:"USD"})}catch(t){}}document.querySelectorAll(".carrossel").forEach(function(e){var t=e.querySelector(".trilho"),o=e.querySelector(".pontos"),p=[].slice.call(t.children),r=p.length;if(!r)return;for(var k=0;k<r;k++)o.appendChild(document.createElement("i"));if(r>1){var A=document.createDocumentFragment(),w=document.createDocumentFragment();p.forEach(function(n){var f=n.cloneNode(!0),s=n.cloneNode(!0);f.setAttribute("aria-hidden","true"),s.setAttribute("aria-hidden","true"),A.appendChild(f),w.appendChild(s)}),t.insertBefore(A,t.firstChild),t.appendChild(w)}function c(){return p[0].getBoundingClientRect().width+16}function y(){return c()*r}function u(n){t.style.scrollBehavior="auto",t.style.scrollSnapType="none",t.scrollLeft=n,t.offsetWidth,t.style.scrollSnapType="",t.style.scrollBehavior=""}function d(){if(!(r<2)){var n=y();t.scrollLeft>=n*2-2?u(t.scrollLeft-n):t.scrollLeft<n*.5&&u(t.scrollLeft+n)}}function B(){var n=(Math.round(t.scrollLeft/c())%r+r)%r;[].forEach.call(o.children,function(f,s){f.className=s===n?"on":""})}r>1&&u(y()),B();var S=null;t.addEventListener("scroll",function(){window.requestAnimationFrame(B),clearTimeout(S),S=setTimeout(d,140)}),window.addEventListener("resize",function(){r>1&&u(y()+(Math.round(t.scrollLeft/c())%r+r)%r*c())}),e.querySelector(".ant").addEventListener("click",function(){d(),t.scrollBy({left:-c(),behavior:"smooth"})}),e.querySelector(".prox").addEventListener("click",function(){d(),t.scrollBy({left:c(),behavior:"smooth"})});var q=Number(e.getAttribute("data-auto"))||0,E=!1,g=null;if(q&&r>1){var D=function(){E=!0,clearTimeout(g)},T=function(){clearTimeout(g),g=setTimeout(function(){E=!1},4e3)};["mouseenter","touchstart","pointerdown","focusin"].forEach(function(n){e.addEventListener(n,D,{passive:!0})}),["mouseleave","touchend","pointerup","focusout"].forEach(function(n){e.addEventListener(n,T,{passive:!0})}),setInterval(function(){E||document.hidden||(d(),t.scrollBy({left:c(),behavior:"smooth"}))},q)}}),document.querySelectorAll("a[data-checkout]").forEach(function(e){var t=e.getAttribute("href")||"";b&&/^https?:/.test(t)&&(e.href=t+(t.indexOf("?")>=0?"&":"?")+b),e.id!=="btn-essencial"&&e.addEventListener("click",function(o){if(l(e)){o.preventDefault(),alert(h);return}m(e)})}),document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(function(e){e.addEventListener("click",function(t){var o=document.getElementById(e.getAttribute("href").slice(1));o&&(t.preventDefault(),o.scrollIntoView({behavior:"smooth",block:"start"}))})});var a=document.getElementById("upsell"),i=document.getElementById("btn-essencial"),I=document.getElementById("upsell-nao"),v=null;function L(){a.hidden=!0,document.body.style.overflow="",v&&v.focus()}i.addEventListener("click",function(e){if(l(document.getElementById("upsell-sim"))){if(l(i)){e.preventDefault(),alert(h);return}m(i);return}e.preventDefault(),v=document.activeElement,a.hidden=!1,document.body.style.overflow="hidden",document.getElementById("upsell-sim").focus()}),a.querySelectorAll("[data-fechar]").forEach(function(e){e.addEventListener("click",L)}),document.addEventListener("keydown",function(e){e.key==="Escape"&&!a.hidden&&L()}),I.addEventListener("click",function(){if(l(i)){alert(h);return}m(i),location.href=i.href})})();</script>
 </body>
 </html>
